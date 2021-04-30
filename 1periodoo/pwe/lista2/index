@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title> </title>
+    </head>
+<body>
+<h1> Trabalhando com tabelas</h1>
+    <table border="1">
+
+<tr>
+    <td rowspan="2">Nome</td>
+    <td colspan="2">salário</td>
+
+
+</tr>
+<tr>
+
+        <td>Mestre</td>
+        <td>Doutor</td>
+</tr>
+<tr>
+     <td>Marvin</td>
+     <td>1500</td>
+      <td>2000</td>
+</tr>
+<tr>
+        <td>Jose</td>
+        <td>2000</td>
+        <td>2500</td>
+</tr>
+<tr>
+        <td>Beatriz</td>
+        <td>2500</td>
+        <td>3000</td>
+</tr>
+    </table>
+
+
+
+</body>
+</html>
