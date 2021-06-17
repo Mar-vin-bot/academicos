@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/ourstrap.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@600&family=Viaoda+Libre&display=swap" rel="stylesheet">
+    <style>
+         nav ul{ /*nav somente para menu de navegação*/
+            list-style: none;
+            display: inline-block;
+            padding: 10px;
+            font-family: Big Shoulders Stencil Display;
+            
+        }
+        nav ul li{
+            display:inline-block;
+           /* text-align: center;*/
+           
+            
+        }
+        nav a:link, a:visited{
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            display: inline-block;
+        }
+        nav a:hover{ 
+            border-bottom: 1px solid yellow;
+
+        }
+        section:nth-child(1) {
+            background-color: rgb(242,251,253);
+            padding:20px;     
+        }
+        section h2{
+            font-size: 30px;
+            color: orangered;
+        }
+        section p{
+            line-height: 1.7em;
+            padding-top:20px;
+        }
+         button{
+        display: block;
+        margin:10px 0px; /*pode simplificar se top/button msm valor e tbm rigth/left msm valor*/
+        padding: 10px; 
+        border: 2px solid blue;
+        background-color: transparent; /*fundo transparente botão*/
+        border-top-right-radius: 10px; /* arrendondar a borda topo-direito em 10 radianos*/
+        border-bottom-right-radius:10px; /* arrendondar a borda inferior-direito em 10 radianos*/
+        font-weight: bold;
+        }
+        button:hover{ /*faz as caracteristicas do botão como um link*/
+            color:white;
+            background-color:rgb(30, 11, 92); 
+        }
+        section img{
+            width: 100%;
+        }
+        .align{
+            text-align: center;
+        }
+
+        a:link, a:visited {
+            text-decoration: none;
+            padding: 10px;
+            display: inline-block; 
+            color: white;
+            /*transition: all 0.5s;  faz um eleito no link de retardamento*/
+        }
+       /* button:hover{
+            background-color:blue;
+            color:white;
+        }*/
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="">Opção 1</a></li>
+                <li><a href="">Opção 2</a></li>
+                <li><a href="">Opção 3</a></li>
+                <li><a href="">Opção 4</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="linha"> <!--Primeira linha-->
+            <div class="col-dg-6 align">
+            <h2>Conheça nossa loja </h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In quae quis autem error, facere ut beatae non, praesentium aperiam possimus necessitatibus ad eveniet ducimus? Excepturi saepe maiores iure repudiandae. Quod. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut sint, pariatur sapiente architecto praesentium libero, dolor blanditiis delectus repellat accusantium voluptatum! Voluptas quae aut harum nobis, eos dolore repellat! Adipisci.</p>
+
+        <button class="col-dg-5">Download</button>
+        <button class="col-dg-5">Entre em contato</button>
+
+           <!--<button class="col-dg-6"><a href="#"> Download </a></button>
+            <button class="col-dg-6"><a href="#"> Entre em contato </a></button>  button-->
+        
+        </div>
+        <div class="col-dg-6 align">
+            <img src="img/img01.png" alt="">
+        </div>
+    </section>
+    <section class="linha"> <!--segunda  linha-->
+        
+        <div class="col-dg-6 align align"> <img src="img/img02.png" alt=""></div>
+        <div class="col-dg-6">
+            <h2>Conheça nossos clientes</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, veritatis similique quidem possimus impedit delectus officia ipsum porro dicta, beatae, quisquam quo perspiciatis in non laboriosam minus quae consequuntur explicabo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat necessitatibus aliquam enim natus, ratione obcaecati repellendus quam ex non quisquam magni quis rerum. Iusto deleniti, aperiam odit laudantium distinctio eius.</p>
+        </div>
+    </section>
+    </main>
+</body>
+</html>
