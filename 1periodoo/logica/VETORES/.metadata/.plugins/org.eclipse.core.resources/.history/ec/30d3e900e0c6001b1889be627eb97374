@@ -1,0 +1,23 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// ler n numeros e mostra somente os negativos
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		int i;
+		int[] n = new int[5];
+		
+		System.out.println("Digite um numero");
+		n [5] = sc.nextInt();
+		System.out.println("os numeros digitados foram "+n[5]);
+		
+		
+		sc.close();
+	}
+
+}

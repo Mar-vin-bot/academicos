@@ -1,0 +1,42 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+
+		
+		int n = sc.nextInt();
+		
+		String[] prod = new String[n];
+		Double [] compra = new Double [n];
+		Double [] venda  = new Double [n];
+		Double [] p100  = new Double [n];
+		
+		for (int i = 0; i<n; i++) {
+			sc.nextLine();//--------limpeza de buffer
+			System.out.println("Qual produto");
+			prod[i] = sc.nextLine();
+			System.out.println("Valor de compra");
+			compra [i] = sc.nextDouble();
+			System.out.println("Preço de venda ");
+			venda[i] = sc.nextDouble();
+			p100[i] = (venda [i] / compra [i])-1*(100);
+			
+		}
+		
+		for (int i = 0; i<n; i++) {
+			System.out.print(compra[i]+ " - ");
+			System.out.print(venda[i]+ " - ");
+			System.out.print(prod[i]+ " - ");
+		}
+		
+		sc.close();
+	}
+
+}

@@ -1,0 +1,71 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		/*
+		int n,cont=0,contF = 0;
+		char m;
+		double maior=0,menor=0,mediaF=0,totf = 0;
+		n = sc.nextInt();
+
+		
+		Double [] alt = new Double[n];
+		char[] sexo =new char[n];
+		
+		for (int i =0;i<n;i++) {
+			System.out.println("Qual altura?");
+			alt[i] = sc.nextDouble();
+			System.out.println("Qual o sexo (m) masc e (f) fem ");
+			sexo[i] = sc.next().charAt(0);
+			if (sexo[i] == 'f') {
+				totf = totf + alt[i];	
+				contF++;
+			}
+			else {
+				cont++;
+			}
+			if (alt[i]<=menor) {
+				menor = alt[i];
+			}
+			
+			else if (alt[i] > maior) {
+				maior = alt[i];
+			}
+
+			
+			
+		}//fim do for
+		mediaF = totf/contF;
+		
+		System.out.println("Menor "+menor);
+		System.out.println("Maior "+maior);
+		System.out.println("Media F "+mediaF);
+		System.out.println("MASC "+cont);
+		*/
+		int numero = 0, comparador = 0, extra;
+		do{
+		System.out.println("Qual o seu número? ");
+			extra = sc.nextInt();
+			for(int i=0;i<extra;i++){
+				comparador++;
+			}
+			if(numero<=comparador){
+				comparador=numero;
+			}
+				
+			//System.out.println("Deseja refazer a ação? ");			
+		}while (extra < 0);
+		//int neg = sc.nextInt();
+		
+		System.out.println("O menor número digitado foi: " + comparador);
+	}
+	
+	}
+
+

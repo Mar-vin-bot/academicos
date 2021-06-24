@@ -1,0 +1,36 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		int i,n,cont =0;
+		
+		System.out.println("Quantos numeros quer  digitar");
+		n =  sc.nextInt();
+		
+		int [] num = new int[n];
+		int [] vet = new int[n];
+		
+		for(i=0;i<n;i++) {
+			System.out.println("Digite os numeros");
+			num[i] = sc.nextInt();
+			if (num[i] % 2 == 0) {
+				cont++;
+			vet[i] = num[i];
+			}
+		}
+		System.out.println("total de par é "+cont);
+		for(i=0;i<n;i++) {
+		System.out.print(vet[i]+" - ");
+		}
+		sc.close();
+		
+	}
+
+}

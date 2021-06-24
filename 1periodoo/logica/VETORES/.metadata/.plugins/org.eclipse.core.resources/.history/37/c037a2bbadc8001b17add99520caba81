@@ -1,0 +1,65 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		/*int n,i,velho = 0;
+				
+		//System.out.println("Quantas pessoas com idade vc quer digitar");
+		n = sc.nextInt();
+		
+		String[] nome = new String [n];
+		
+		//int[] c; tbm declara variavel 
+		
+		for (i=0;i<n;i++) {
+
+			System.out.println("Digite o nome ");
+			nome[i] = sc.nextLine();
+		}
+		
+		int [] idade = new int[n];
+		
+		for (i=0;i<n;i++) {
+			System.out.println("Digite a idade ");
+			idade[i] = sc.nextInt();
+			if (idade[i]> velho) {
+				velho=idade[i];
+			}
+		}
+		
+		System.out.println(velho);*/
+		
+		int n,i;
+		//String nome;
+		
+		/*System.out.println("Quantos nomes");
+		n = sc.nextInt();
+		
+		String[] nome = new String [n];
+		
+		for (i = 0;i<n;i++) {
+		System.out.println("Entre com os nomes");
+		nome[i] = sc.nextLine(); // --------- limpeza de buffer
+		
+		}*/
+		String[] nome = new String [5];
+		for(i=0;i<n;i++) {
+		System.out.println("Digite seu nome");
+		nome[5] = sc.nextLine();
+		}
+		
+		System.out.println("Seu nome é "+nome);
+		
+		
+		
+		sc.close();
+	}
+
+}

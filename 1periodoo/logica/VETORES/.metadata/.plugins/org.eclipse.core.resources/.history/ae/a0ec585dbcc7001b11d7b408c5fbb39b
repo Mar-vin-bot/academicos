@@ -1,0 +1,32 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		int n;
+		
+		System.out.println("Quantos numeros quer digirar");
+		n = sc.nextInt();
+		
+		int [] veta = new int[n];
+		int [] vetb = new int[n];
+		int [] vet = new int[n];
+		
+		System.out.println("Entrar com os primeiros numeros");
+		veta = sc.nextInt();
+		System.out.println("Entrar com a segunda parte dos numeros");
+		vetb = sc.nextInt();
+		
+		
+		
+		
+		sc.close();
+	}
+
+}

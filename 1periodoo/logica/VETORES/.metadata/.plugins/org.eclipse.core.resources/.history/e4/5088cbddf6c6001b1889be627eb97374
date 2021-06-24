@@ -1,0 +1,34 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// ler n numeros e mostra somente os negativos
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		int i,n;
+		
+		System.out.println("Quantos numeros digitar");
+		n =  sc.nextInt();
+		
+		int [] vet = new int[n];
+		
+		for (i=0;i<n;i++) {
+			System.out.println("Digite um numero");
+		vet[i] =  sc.nextInt();
+		}
+		
+		System.out.println("\nNumeros digitados");
+		//for (i=0;i<n;i++) {
+			System.out.println("-> "+vet[i]);
+		//}
+		
+		
+		
+		sc.close();
+	}
+
+}

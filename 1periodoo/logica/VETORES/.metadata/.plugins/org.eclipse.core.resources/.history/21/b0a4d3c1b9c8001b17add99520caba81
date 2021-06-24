@@ -1,0 +1,70 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		/*int n,i,velho = 0;
+		//String velho = 0;
+				
+		System.out.println("Quantas pessoas com idade vc quer digitar");
+		n = sc.nextInt();
+		
+		String[] nome = new String [n];
+		
+		//int[] c; tbm declara variavel 
+		
+		sc.nextLine();
+		for (i=0;i<n;i++) { 	
+			System.out.println("Digite o nome ");
+			nome[i] = sc.nextLine();
+			if (nome[i](int) > velho) {
+				velho = nome[i];
+			}
+		}
+		
+		int [] idade = new int[n];
+		
+		for (i=0;i<n;i++) {
+			System.out.println("Digite a idade ");
+			idade[i] = sc.nextInt();
+			if (idade[i]> velho) {
+				velho=idade[i];
+			}
+		}
+		
+		
+		System.out.println(velho);*/
+		
+		int n,j,velho=0,name;
+		
+		
+		System.out.println("Quantos pessoas quer digitar");
+		n = sc.nextInt();
+		
+		String[] nome = new String [n];
+		int [] idade = new int[n];
+		
+		for (int i=0; i<n; i++) {
+            System.out.println ("Insira o nome da pessoa: " +nome[i]);
+            nome[i] = sc.nextLine();
+            System.out.println ("Insira a idade do(a) " +nome[i]);
+            idade[i] = sc.nextInt();
+            if (idade[i]> velho) {
+				velho=idade[i];
+				name=nome[i];
+			}
+     }
+
+System.out.println ("Maior idade: "+velho );
+System.out.println ("Nome: " +name );
+
+		sc.close();
+	}
+
+}
