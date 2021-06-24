@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>revisão</title>
+    <link rel="stylesheet" href="css/ourstrap.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap" rel="stylesheet"> 
+    <style>
+        nav ul{ /*nav somente para menu de navegação*/
+            list-style: none;
+            padding: 10px;
+            font-family: 'Kirang Haerang', cursive;
+            text-align: center;
+            background-color: black;
+        }
+        nav ul li{
+            display:inline-block;
+        }
+        h1{
+            font-size: 23px;
+            text-align: center;
+        }
+        header h1:hover{
+	        letter-spacing:10px; /* efeito*/
+            transition: all 0.5s
+        }
+        .titleH2{
+            font-size: 15px;
+            text-align: center;
+            color: red ;
+        }
+        .htmlEtc{
+            color:green;
+            font-size:23px;
+            text-align: center;
+        }
+        .divTest{
+            text-align: center;
+        }
+        section:nth-child(1) {
+            background-color:lightgray;
+            padding:20px;
+
+        }
+        section{
+            padding:10px;
+        }
+        nav a:link{
+            text-decoration: none;
+            padding: 10px;
+            display: inline-block;
+        }
+
+        .mg{    /*apagar*/
+
+        }
+        .sec{ /*apagar*/
+        }
+        section:nth-child(1) img{
+            width:50%;
+        }
+        .divImg{
+
+            text-align: center;
+            width:50%;
+            margin:auto;
+        }
+        .pf {
+            padding-bottom:10px;
+        }
+        a.html:link{
+            background-image: url(oran.jpeg);
+            padding-right: 15px;
+            padding-left: 20px;
+        }
+        a.css:link{
+            background-image: url(azul.png);
+            padding-right: 25px;
+            padding-left: 25px;
+        }
+        a.java:link{
+            background-image: url(amarelo.jpeg);
+            padding-right: 0px;
+        }
+        a.java:visited{
+            color:#FFE341;
+        }
+        a.css:visited{
+            color: #1C348A;
+        }
+        a.html:visited{
+            color: #FE6C23;
+        }
+
+
+                            /*flex box*/
+
+        .container{
+        display: flex;
+        flex-direction:column; 
+        /*flex-flow: row wrap; */
+        justify-content: center; 
+        }
+
+        .container > div {   /*aqui nasce as divs dentro do section*/
+        width: 100%;
+        margin: 10px;
+        padding: 5px;
+        margin: auto;
+        margin-bottom: 10px;
+
+        }
+
+         @media screen and (min-width: 1000px){
+             nav ul{
+                 font-size:20px;
+             }
+            .titleH2{
+            color:blue ;
+        }
+            .container {
+            flex-direction:row;
+            flex-wrap: wrap;
+        }
+        .container > div {
+            width:33.33%;
+            margin: auto;
+        }
+
+        header img{
+            width:100%;
+        }
+
+        header  nav ul {
+            text-align: right;
+        }
+        a.html:link{            /*desktop*/
+            background-image: url(oran.jpeg);
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        a.html:hover{
+            background-image: url();
+            color: yellowgreen;
+        }
+
+        a.css:link{             /*desktop*/
+            background-image: url(azul.png);
+            padding-left: 20px;
+            padding-right: 25px;
+        }
+        a.css:hover{
+            background-image: url();
+            color: yellowgreen;
+        }
+
+        a.java:link{            /*desktop*/
+            background-image: url(amarelo.jpeg);
+            padding-right: 0px;
+        }
+        a.java:hover{
+            background-image: url();
+            color: yellowgreen;
+        }
+        section:nth-child(1) {
+            width:100%;
+        }
+            
+
+        .container2{
+        display: flex;
+        flex-direction:row; 
+        justify-content: center;  
+        }
+
+        .container2 > div {   /*aqui nasce as divs dentro do section*/
+        margin: 10px;
+        padding: 5px;
+        margin: auto;
+        margin-bottom: 10px;
+        }
+
+        .container3{
+        display: flex;
+        flex-direction:row-reverse; 
+        justify-content: center;    
+        }
+
+        .container3 > div {  
+        margin: 10px;
+        padding: 5px;
+        margin: auto;
+        margin-bottom: 10px;
+        }
+
+        p{
+            padding-bottom: 5px;
+        }
+        } /* fim das especificações para desktop*/
+
+
+        .container4{
+        display: flex;
+        flex-direction:row-reverse; 
+        /*flex-flow: row wrap; */
+        justify-content: flex-start; 
+        align-items: flex-start;  
+
+        }
+
+        .container4 > div {  
+        margin: 10px;
+        padding: 5px;
+        margin: auto;
+        margin-bottom: 10px;
+        }
+
+
+        footer{
+            background-color: black;
+            font-size: 13px;
+            padding: 30px;
+            text-align: right;
+        }
+
+        footer a:visited{
+            color: yellow;
+        }
+        footer a:link{
+            text-decoration: none;
+            color: yellow;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href=""class="html">HTML</a></li>
+                <li><a href="" class="css">CSS</a></li>
+                <li><a href=""class="java">JavaScript</a></li>
+            </ul>
+        </nav>
+        <img src="img/topo.png" alt="" width="100%">
+
+            <h1>Web Design na Pratica</h1>
+            <h2 class="titleH2">HTML, CSS & JavaScript</h2>
+
+    </header>                   <!--fim de header-->
+
+    <main>
+        <section class="container mg">           <!--Primeira section-->
+            <div class="sec">
+               <div class="divImg"> <img src="img/html5.png" alt="" width=""></div>
+                
+                <h2 class="htmlEtc">HTML5</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum ducimus, esse qui accusamus sapiente deleniti veritatis aperiam magni nihil laudantium placeat similique ipsam illum quasi natus hic harum, mollitia sequi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quo voluptas, alias quibusdam officiis, ad vitae ea quasi sapiente id repellendus odit quaerat laborum, quod fugiat dolorum eveniet tempora enim?</p>
+            </div>
+            <div class="sec" >
+                <div class="divImg"><img src="img/css3.png" alt="" width="100px"></div>
+                <h2 class="htmlEtc">CSS</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum ducimus, esse qui accusamus sapiente deleniti veritatis aperiam magni nihil laudantium placeat similique ipsam illum quasi natus hic harum, mollitia sequi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quo voluptas, alias quibusdam officiis, ad vitae ea quasi sapiente id repellendus odit quaerat laborum, quod fugiat dolorum eveniet tempora enim?</p>
+            </div>
+            <div class="sec">
+                <div class="divImg"> <img src="img/javascript.png" alt="" width="100px"></div>
+                <h2 class="htmlEtc">JavaScript</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum ducimus, esse qui accusamus sapiente deleniti veritatis aperiam magni nihil laudantium placeat similique ipsam illum quasi natus hic harum, mollitia sequi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quo voluptas, alias quibusdam officiis, ad vitae ea quasi sapiente id repellendus odit quaerat laborum, quod fugiat dolorum eveniet tempora enim?</p>
+                
+            </div>
+            </section>
+
+            <section class="container3 mg">       <!--Segunda section-->
+                <div class=" sec"> <img src="img/portifolio01.jpg" alt="" width="300px"> </div>
+                <div class="  div2pt">
+                    <p class="pf">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum ducimus, esse qui accusamus sapiente deleniti veritatis aperiam magni nihil laudantium placeat similique ipsam illum quasi natus hic harum, mollitia sequi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quo voluptas, alias quibusdam officiis, ad vitae ea quasi sapiente id repellendus odit quaerat laborum, quod fugiat dolorum eveniet tempora enim?</p>
+                    <p class="">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum ducimus, esse qui accusamus sapiente deleniti veritatis aperiam magni nihil laudantium placeat similique ipsam tetur adipisicing elit. Magni quo voluptas, alias quibusdam officiis, ad vitae ea quasi sapiente id repellendus odit quaerat laborum, quod fugiat dolorum eveniet tempora enim?</p>
+                    <p class="pf">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum ducimus, esse qui adipisicing elit. Magni quo voluptas, alias quibusdam officiis, ad vitae ea quasi sapiente id repellendempora enim?</p></p>
+                </div>
+                </section>
+            
+                <section class="container2 mg">     <!--3 section-->
+                    <div class="sec"><img src="img/portifolio02.jpg" alt="" width="300px"></div>
+                    <div class="div2pt">
+                        <p class="pf">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum ducimus, esse qui accusamus sapiente deleniti veritatis aperiam magni nihil laudantium placeat similique ipsam illum quasi natus hic harum, mollitia sequi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quo voluptas, alias quibusdam officiis, ad vitae ea quasi sapiente id repellendus odit quaerat laborum, quod fugiat dolorum eveniet tempora enim?</p>
+                        <p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum ducimus, esse qui accusamus sapiente deleniti veritatis aperiam magni nihil laudantium placeat similique ipsam tetur adipisicing elit. Magni quo voluptas, alias quibusdam officiis, ad vitae ea quasi sapiente id repellendus odit quaerat laborum, quod fugiat dolorum eveniet tempora enim?</p>
+                        <p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum ducimus, esse qui adipisicing elit. Magni quo voluptas, alias quibusdam officiis, ad vitae ea quasi sapiente id repellendempora enim?</p>
+                    </div>
+                </section>
+
+                <section class="container2 mg">         <!--4 section-->
+                <div class=" sec"><img src="img/portifolio03.jpg" alt="" width="300px"> </div>
+                <div class=" div2pt">
+                    <p class="pf">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum ducimus, esse qui accusamus sapiente deleniti veritatis aperiam magni nihil laudantium placeat similique ipsam illum quasi natus hic harum, mollitia sequi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quo voluptas, alias quibusdam officiis, ad vitae ea quasi sapiente id repellendus odit quaerat laborum, quod fugiat dolorum eveniet tempora enim?</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum ducimus, esse qui accusamus sapiente deleniti veritatis aperiam magni nihil laudantium placeat similique ipsam tetur adipisicing elit. Magni quo voluptas, alias quibusdam officiis, ad vitae ea quasi sapiente id repellendus odit quaerat laborum, quod fugiat dolorum eveniet tempora enim?</p>
+                    <p class="pf">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum ducimus, esse qui adipisicing elit. Magni quo voluptas, alias quibusdam officiis, ad vitae ea quasi sapiente id repellendempora enim?</p>
+                </div>
+            </section>
+    </main>
+<footer>
+        <div class="container4"><a href="mailto:marvin.silva@estudante.iftm.edu.br?subject=Orçamento">Contato: Marvin de Souza Silva </a></div>
+       
+
+        <!-- faz um link que abra o email ou telefone criar uma caixa e posicionar txt em canto infeiror direito-->
+</footer>
+    
+</body>
+</html>
