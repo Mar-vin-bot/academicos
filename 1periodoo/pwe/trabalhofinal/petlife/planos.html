@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pe-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+        header a{
+            text-decoration: none;
+        }
+        nav ul li{
+            list-style: none;
+            padding: 0px;
+            display: inline-block;
+        }
+
+        header ul{
+            text-align: center;
+        }
+        header{
+            margin: 5px;
+        }
+        header h1{
+            font-size: 20px;
+            text-align: center;
+            /*background-color: #FFEACF;*/
+            color: black;
+        }
+        header a{
+            color: white;
+        }
+        header a:hover{
+            color: black;
+        }
+        button a:hover{
+            color: black;
+        }
+        button a{
+            color: white;
+            text-decoration: none;
+        }
+        .login {
+            margin-left: 2.5%;
+        }
+        header h5{ /*tenho que apagar?*/
+            text-align: right;
+            /*background-color: #FFEACF;*/
+            color: black;   
+        }
+        main ul{
+            margin-left: 15px;
+        }
+        .divPlanos{
+           text-align: center;
+           /*border: 3px red solid;*/
+           width: 95%;
+           margin: auto;
+        }
+        .preço{
+            text-align:center;
+            padding: 8px;
+            font-weight: bold;
+        }
+        .divPlanos p {
+            text-align: justify;
+        }
+        button{
+            font-size: 15px;
+            padding: 10px;
+            background-color: #2CA577;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        .divFooter img{
+            width: 30px;
+        }
+        
+        .divFooter{
+            display: flex;
+            flex-direction:row;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+        .divFooter p {
+            padding-right: 15px;
+            font-size: 18px;
+        }
+        footer a { /*acho que pode apagar*/
+            text-align: center;
+        }
+        Footer p{
+           font-size: 13px; 
+        }
+        footer a {
+            display: block;
+            text-align: right;
+            margin-right:9px;
+        }
+        header, footer{
+            background-color: #2CA577
+        }
+        footer a{
+            color: white;
+            text-decoration: none;
+        }
+        footer a:hover{
+            color: black;
+        }
+        @media screen and (min-width: 1000px){
+            header ul {
+            text-align: right;
+            }
+            .container1{
+                display: flex;
+                flex-direction:row; 
+                width: 95%;
+                margin:auto;
+                
+
+            }
+            .container1 > div{
+                width:33.00%;
+            }
+        }
+
+
+    </style>
+</head>
+<body class="">
+    <header>
+        <a href="index.html"><h1>Pet Life</h1></a>
+        <a href="login.html" class="login"> Login</a> <!--fazer outro link com pg de login não esta na msm linha devdo a caracteristica de quebra de linha-->
+        <nav>
+            <ul>
+                <a href=""><li> Planos </li></a>
+                <a href=""><li> Rede credenciada</li></a> <!--faz uma ancora com img-->
+                <a href="#contato"><li> Contato </li></a> <!--faz uma ancora com footer-->
+
+            </ul>
+        </nav>  
+    </header>
+    <main>
+        <section class="container1">
+            <div class="divPlanos">
+                <img src="basic.png" alt="">
+                <h2>Basic</h2>
+                <p class="preço">R$ 69,90 / mês </p>
+                    <p>Com carências de 30 a 60
+                    dias a depender do procedimento.
+                    Limite da cobertura anual 3 mil</p>
+                    <button><a href="">Contratar</a></button>
+                    <details>
+                    <summary>Saiba mais</summary>
+                        <h4>Parceria com a Petz</h4>
+
+                            <ul>
+                                <li>5% de desconto em rações</li>
+                                <li>10% de desconto em brinquedos</li>
+                            </ul>
+                        </details>
+
+            </div>
+            <div class="divPlanos">
+                <img src="award.png" alt="">
+                <h2>Award</h2>
+                <p class="preço">R$ 189,90/ mês </p>
+                <p>Sem carência exceto para
+                    doenças pré-existentes.
+                    Limite da cobertura anual R$ 7 mil</p>
+                    <button><a href="">Contratar</a></button>
+                    <details>
+                    <summary>Saiba mais </summary>
+                        <h4>Parceria com desconto de até
+                            50%</h4>
+                            <ul>
+                                <li>5% de desconto em rações;</li>
+                                <li>10% de desconto em brinquedos;</li>
+                                <li>Microchipagem</li>
+                                <li>Assistência Funeral</li>
+                                <li>15% de desconto em Creches e Hotéis.</li>
+                            </ul>
+
+                    </details>
+
+            </div>
+            <div class="divPlanos">
+                <img src="average.png" alt="">
+                <h2>Average</h2>
+                <p class="preço">R$ 129,90/ mês </p>
+                <p>Sem carência exceto para
+                    doenças pré-existentes.
+                    Limite da cobertura anual R$ 4,5 mil</p>
+                    <button><a href="">Contratar</a></button>
+                    <details>
+                    <summary>Saiba mais </summary>
+                        <h4>Parceria com desconto </h4>
+                            <ul>
+                                <li>5% de desconto em rações;</li>
+                                <li>10% de desconto em brinquedos;</li>
+                                <li>5% de desconto em Creches e Hotéis.</li>
+                            </ul>
+
+                    </details>
+
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <div class="divFooter">
+            <p>Siga Pet Life</p>
+            <a href=""><img src="insta.png" alt=""></a>
+            <a href=""><img src="face.png" alt=""></a>
+            <a href=""> <img src="whatsapp-logo-1-1.png" alt=""></a>
+           
+        </div>
+        <div>
+            <a href="contato.html" id="contato">Fale conosco</a>
+            <p>Todos os direitos reservados</p>
+        </div>
+        </footer>
+    
+</body>
+</html>

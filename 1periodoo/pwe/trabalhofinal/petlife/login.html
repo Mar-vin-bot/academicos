@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+    header a{
+            text-decoration: none;
+        }
+    nav ul li{
+            list-style: none;
+            padding: 0px;
+            display: inline-block;
+        }
+        header a{
+            color: white;
+        }
+        header a:hover{
+            color: black;
+        }
+        button a:hover{
+            color: black;
+        }
+
+    header ul{
+            text-align: center;
+        }
+    header{
+            margin: 5px;
+        }
+    header h1{
+            font-size: 20px;
+            text-align: center;
+            /*background-color: #FFEACF;*/
+            color: black;
+        }
+
+       /* body{
+        border: solid 3px red;
+        background-image: url('cao.jpg');
+        background-size: cover; /* ajusta a imgem ao tamanho da tela
+        
+        }*/
+        .divCentral{
+            border: 3px solid red;
+            height: 700px;
+            width: 100%;
+            background-image: url(caogrande.jpg);
+            background-size: cover; /* ajusta a imgem ao tamanho da tela*/
+        }
+        .divCentral img {
+            width:300;
+        }
+
+    .boxlogin{
+        background-color: transparent;
+        width: 30%;
+        height: 200px;
+        margin:auto;
+        margin-top: 200px;
+        border-radius: 20px;
+        border: red 2px solid;
+        text-align: center;
+        padding-top: 10px;
+
+        }
+     input[type="text"], input[type="password"] {
+        display: block;
+        background-color: rgb(255,255,255,0);
+        border: 3px solid gray;
+        margin: auto;
+        width: 90%;
+        margin-bottom: 15px;
+        padding: 10px;
+        font-size: 20px;
+        }
+        button{
+            font-size: 20px;
+            padding: 5px;
+            border-radius: 10px;
+            background-color: #2CA577;
+            color: white;
+        }
+        .boxlogin a{
+            color: white;
+            text-decoration: none;
+        }
+        .boxlogin a:hover{
+            color:black;
+        }
+        .divFooter img{
+            width: 30px;
+        }
+        .divFooter{
+            display: flex;
+            flex-direction:row;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+        .divFooter p {
+            padding-right: 15px;
+            font-size: 18px;
+        }
+        footer a { /*acho que pode apagar*/
+            text-align: center;
+        }
+        Footer p{
+           font-size: 13px; 
+        }
+        footer a {
+            display: block;
+            text-align: right;
+            margin-right:9px;
+        }
+        footer, header {
+            background-color:#2CA577;
+        }
+        footer a{
+            color: white;
+            text-decoration: none;
+        }
+        footer a:hover{
+            color: black;
+        }
+        @media screen and (min-width: 1000px){
+        header  nav ul {
+            text-align: right;
+        }
+        .divCentral{
+            height: 700px;
+        }
+        .divFooter img{
+            width: 30px;
+        }
+        .divFooter{
+            display: flex;
+            flex-direction:row;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+        .divFooter p {
+            padding-right: 15px;
+            font-size: 18px;
+        }
+        footer p{
+           font-size: 15px; 
+           text-align: center;
+        }
+        footer a {
+            display: block;
+            text-align: right;
+            margin-right:9px;
+        }
+        footer, header{
+            background-color: #2CA577;
+        }
+
+
+        }/* fim do @media*/
+</style>
+<body>
+    <header>
+        <a href="index.html"><h1>Pet Life</h1></a>
+        <a href=""> Login</a> <!--fazer outro link com pg de login não esta na msm linha devdo a caracteristica de quebra de linha-->
+        <nav>
+            <ul>
+
+                <a href="planos.html"><li> Planos </li></a>
+                <a href=""><li> Rede credenciada</li></a>
+                <a href="#contato"><li> Contato </li></a>
+
+            </ul>
+        </nav>  
+    </header>
+    <main>
+        <div class="divCentral">
+    <div class="boxlogin">
+ 
+        <form>
+            <!--<input type="text" name="" id="">
+            <input type="password" name="" id="">-->
+            
+            <label for="cpf"></label>  
+            <input type="text" id="cpf"  maxlength="11" required placeholder="CPF"> <!--cṕf-->
+
+            <label for="senha"></label>  
+            <input type="password" id="senha" maxlength="18" required placeholder="Senha">
+
+            <button><a href="">Login</a></button>
+            <a href="">Redefinir senha </a>
+
+        </form>   
+       <!-- <img src="cao.jpg" alt="" width="">-->
+    </div>
+</div>  
+</main>
+<footer>
+    <div class="divFooter">
+        <p>Siga Pet Life</p>
+        <a href=""><img src="insta.png" alt=""></a>
+        <a href=""><img src="face.png" alt=""></a>
+        <a href=""> <img src="whatsapp-logo-1-1.png" alt=""></a>
+       
+    </div>
+    <div>
+        <a href="contato.html" id="contato">Fale conosco</a>
+        <p>Todos os direitos reservados</p>
+    </div>
+</footer>
+</body>
+</html>

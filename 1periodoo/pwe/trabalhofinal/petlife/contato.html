@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+                *{
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+        header a{
+            text-decoration: none;
+            color: white;
+        }
+        header a:hover{
+            color:black;
+        }
+        nav ul li{
+            list-style: none;
+            padding: 0px;
+            display: inline-block;
+        }
+        button a{
+            color: white;
+            text-decoration: none;
+        }
+        button a:hover{
+            color: black;
+        }
+        header ul{
+            text-align: center;
+        }
+        header{
+            margin: 5px;
+        }
+        header h1{
+            font-size: 20px;
+            text-align: center;
+            /*background-color: #FFEACF;*/
+            color: black;
+        }
+        header h5{ /*tenho que apagar?*/
+            text-align: right;
+            /*background-color: #FFEACF;*/
+            color: black;   
+        }
+        .login {
+            margin-left: 2.5%;
+        }
+        .sectionGeral{
+            margin: 10px;  
+        }
+        footer{
+
+            background:#FFEACF;
+        }
+        .divFooter img {
+            width:35px;
+            border: solid 3px black;
+        }
+        .div1 img{
+            width: 90%;  
+        }
+        .div1{
+            text-align:center;
+            border: solid 2px black;
+            margin-bottom: 5px;
+        }
+        .teste{ /*apagar*/
+            border: red solid 3px;
+        }
+        div img {
+            width: 95%;
+            margin: auto;
+        }
+        .divGeral  {
+            width: 95%;
+            margin: auto;
+            text-align:center;
+        }
+        .divGeral p{
+            text-align: justify;
+        }
+        .divGeral img{
+            text-align: center;
+        }
+        /*button{
+            border-radius: 10px;
+            margin-left: 40%;
+            padding: 5px;
+            background-color: #2CA577;
+            color: white;
+        }*/
+        button{
+            font-size: 15px;
+            padding: 10px;
+            background-color:#2CA577; 
+            font-weight: bold;
+            color: white;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        .divGeral button {
+            display: block;
+            margin: auto;
+        }
+        section :nth-child(1) p {
+           padding-bottom: 10px; 
+        }
+        ul { /*main ul li*/
+            text-align: center;
+        }
+        .divFooter{
+            display: flex;
+            flex-direction:row;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+        .divFooter p {
+            padding-right: 15px;
+            font-size: 18px;
+        }
+        footer a { /*acho que pode apagar*/
+            text-align: center;
+        }
+        Footer p{
+           font-size: 13px; 
+        }
+        footer a {
+            display: block;
+            text-align: right;
+            margin-right:9px;
+        }
+        footer, header{
+            background-color: #2CA577;
+        }
+        footer a{
+            color: white;
+            text-decoration: none;
+        }
+        footer a:hover{
+            color: black;
+        }
+        .space{
+            margin-top: 15px;
+        }
+        @media screen and (min-width: 1000px){
+            header ul {
+            text-align: right;
+            }
+            .container{
+                display: flex;
+                flex-direction:row; 
+                width: 95%;
+                margin: auto;
+            }
+            .container > div{
+                width:100%;
+            }
+            .container1{
+                display: flex;
+                flex-direction:row; 
+                width: 95%;
+                margin:auto;
+            }
+            .container1 > div{
+                width:33.33%;
+            }
+            .img12 img{
+                whidth: 50%;
+            }
+            .img345 img{
+                height: 300px;
+            }
+            ul{
+                text-align:justify;
+            }
+            .pCenter p{
+                text-align:center;
+            }
+            .divRecl img{
+                 height: 50%;
+            }
+
+
+        }/*fim do DP*/
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><h1>Pet Life</h1></a>
+        <a href="login.html" class="login"> Login</a> <!--fazer outro link com pg de login não esta na msm linha devdo a caracteristica de quebra de linha-->
+        <nav>
+            <ul>
+                <a href="planos.html"><li> Planos </li></a>
+                <a href="#credenciada"><li> Rede credenciada</li></a> <!--faz uma ancora com img-->
+                <a href="#contato"><li> Contato </li></a> <!--faz uma ancora com footer-->
+
+            </ul>
+        </nav> 
+
+    </header>
+    <main>
+        <section class="container">
+            <div>
+                <h2>Contato</h2>
+                <p>Nosso atendimento é totalmente focado em meios eletronicos. Para nos contactar pode entrar em contato pelas midias sociais da PetLife ou preencher o formulario que retornamos o contato.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, soluta obcaecati, dignissimos iste mollitia error alias cumque a dolore laboriosam fuga culpa praesentium eius explicabo, consectetur libero fugit. Sit, ipsum.</p>
+            </div>
+            <div>
+                <img src="atendimento.jpg" alt="">
+            </div>
+        </section>
+        <section class="container">
+            <div class="">
+                <h2>Fale Conosco</h2>
+            
+                   <h5>Todos os Campos são de preenchimento obrigatório </h5>
+                   <form>
+               <fieldset class="space">
+                <legend>Dados Pessoais</legend> 
+               <label for="textName">Nome:</label>
+               <input type="text" id="textName" maxlength="40" required placeholder="Nome completo">
+         
+               
+               <label for="dat">Data de Nascimento:</label>
+               <input type="date" id="dat" required> 
+               </fieldset>
+               
+ 
+               <fieldset class="space">
+               <legend>Informações de Contato</legend>
+               <label for="email">Email:</label> 
+               <input type="email" id="email" required>
+
+               
+               <Label for="tele">Celular</Label>
+               <input type="tel" id="tele" maxlength="9" required min="1" placeholder="Apenas números (max 9)">
+               </fieldset>
+               <fieldset class="space">
+                   <legend>Elogios, reclamações e sugestões</legend>
+                   <textarea rows="4" cols="90" maxlength="500"> Permita-nos te auxiliar...</textarea>
+               </fieldset>
+               <button><a href="">Enviar</a></button>
+
+
+               </form>
+               
+            </div>
+            <div class="divRecl">
+                <img src="2reclame.png" alt="">
+            </div>
+        </section>
+        </section>
+    </main>
+    <footer>
+        <div class="divFooter">
+            <p>Siga Pet Life</p>
+            <a href=""><img src="insta.png" alt=""></a>
+            <a href=""><img src="face.png" alt=""></a>
+            <a href=""> <img src="whatsapp-logo-1-1.png" alt=""></a>
+           
+        </div>
+        <div>
+            <a href="" id="contato">Fale conosco</a>
+            <p>Todos os direitos reservados</p>
+        </div>
+        </footer>
+    
+</body>
+</html>
