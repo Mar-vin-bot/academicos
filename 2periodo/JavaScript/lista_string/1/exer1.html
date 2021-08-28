@@ -1,0 +1,29 @@
+<html>
+<head>
+<title></title>
+<script type="text/javascript">
+
+nome = prompt("Qual o seu nome ?");
+sobreNome = prompt ("Qual seu sobrenome ?");
+cor = prompt("Qual cor gostaria de usar? ");
+n = prompt("Digite um numero ");
+
+vet_palavras = sobreNome.split(" ")
+
+//for (j=0; j<=n; j++)
+/*for (i=0; i<vet_palavras.length; i++)
+if (i%2 != 0){
+document.write(`<p> ${i} ${nome} </span> <span style="color:${cor}"> ${vet_palavras[i]} </p>`)
+}else{
+    document.write(` ${vet_palavras[i]} `)
+}*/
+
+
+for (i=0; i<n; i++) // (;) aqui fez o for dar erro
+document.write(`<p> ${i} ${nome}  ${sobreNome} </p>`);
+
+</script>
+</head>
+<body>
+</body>
+</html>

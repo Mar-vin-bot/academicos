@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        texto = prompt("Informe seu texto","amor deus sabedoria amizade companheirismo pastel bola caminhão ")
+
+        palavras = texto.split(" ");
+        
+        vetorLetras = ["a","b","c","d","e","f","g","h","i",,"j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"] // alfabeto
+
+
+        for (i=0; i<vetorLetras.length; i++){
+            letra = vetorLetras[i];
+            achouPalavra = false;
+            for (j=0; j<palavras.length; j++){
+                if (palavras[j].charAt(0) == letra){
+                if (achouPalavra == false) {   document.write(`<h2> Palavras iniciadas com a letra ${letra}  </h2>`);
+                    achouPalavra = true;
+                    document.write(`<ul>`)
+                }
+                document.write(`<li>${palavras[j]}  </li>`);
+            }
+        }
+        if(achouPalavra)    document.write(`</ul>`)
+    }       
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        texto = prompt("Digite o seu texto ", "amor deus sabedoria amizade companheirismo     ")
+        letra = prompt ("Digite uma letra ", "a")
+   
+        palavras = texto.split(" ");
+
+        //2 passo verificação da letra informada
+        achou = false
+        for (i=0; i<palavras.length; i++){
+        palavra = palavras[i];
+        if (palavra.charAt(0) == letra){
+            document.write(`<p> ${palavra}<p>`)
+
+            achou = true;
+        }
+    }
+        if (!achou) document.write(`Não foi encontrada palavra com a letra ${letra}`)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
