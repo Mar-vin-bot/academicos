@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        h2{
+            text-align: center; 
+            color: red;
+        }
+        p{
+            font-weight: bold;
+        }
+        /*.princ{
+            border: 3px red solid;
+        }*/
+        .divJog{
+            /*border: 3px black solid;*/
+            text-align: right;
+            width: 49%;
+            float: left; 
+            font-size: 25px;
+        }
+        .divCar{
+            /*border: 3px yellow solid;*/
+            width: 49%;
+            float: left; 
+            margin: auto;
+            padding: 0px;
+            text-align:center;
+        }
+        .divCar, img{
+            margin-left: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <main>
+        <h1>Jogue Truco </h1>
+        <h2>Cartas sorteadas</h2>
+
+        <script>
+    document.write(`<div class="princ">`) // div principal
+
+        document.write(`<div class="divJog">`)
+            document.write(`<p>Cartas do Jogador 1:</p> `)
+        document.write(`</div>`)
+
+
+            document.write(`<div class="divCar">`)
+                        j11= (Math.floor((Math.random() * (27-1+1)) + 1));
+                        document.write(`<img src="carta${j11}.png">`)
+                        j12= (Math.floor((Math.random() * (27-1+1)) + 1));
+                        document.write(`<img src="carta${j12}.png">`)
+                        j13= (Math.floor((Math.random() * (27-1+1)) + 1));
+                        document.write(`<img src="carta${j13}.png">`)
+            document.write(`</div>`)
+
+            document.write(`<div class="divJog">`)
+            document.write(`<p>Cartas do Jogador 2:</p> `)
+            document.write(`</div>`)
+
+            document.write(`<div class="divCar">`)
+                        j21= (Math.floor((Math.random() * (27-1+1)) + 1));
+                        document.write(`<img src="carta${j21}.png">`)
+                        j22= (Math.floor((Math.random() * (27-1+1)) + 1));
+                        document.write(`<img src="carta${j22}.png">`)
+                        j23= (Math.floor((Math.random() * (27-1+1)) + 1));
+                        document.write(`<img src="carta${j23}.png">`)
+            document.write(`</div>`)
+
+            document.write(`<div class="divJog">`)
+            document.write(`<p>Cartas do Jogador 3:</p> `)
+            document.write(`</div>`)
+
+            document.write(`<div class="divCar">`)
+                        j31= (Math.floor((Math.random() * (27-1+1)) + 1));
+                        document.write(`<img src="carta${j31}.png">`)
+                        j32= (Math.floor((Math.random() * (27-1+1)) + 1));
+                        document.write(`<img src="carta${j32}.png">`)
+                        j33= (Math.floor((Math.random() * (27-1+1)) + 1));
+                        document.write(`<img src="carta${j33}.png">`)
+             document.write(`</div>`)
+
+             document.write(`<div class="divJog">`)
+            document.write(`<p>Cartas do Jogador 4:</p> `)
+            document.write(`</div>`)
+
+            document.write(`<div class="divCar">`)
+                        j41= (Math.floor((Math.random() * (27-1+1)) + 1));
+                        document.write(`<img src="carta${j41}.png">`)
+                        j42= (Math.floor((Math.random() * (27-1+1)) + 1));
+                        document.write(`<img src="carta${j42}.png">`)
+                        j43= (Math.floor((Math.random() * (27-1+1)) + 1));
+                        document.write(`<img src="carta${j43}.png">`)
+            document.write(`</div>`)
+
+
+    document.write(`<div>`) // fechamento div principal
+        </script>
+    </main>
+
+</body>
+</html>

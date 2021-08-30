@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //jogo = ["pedra","papel","tesoura"] //1 pedra ------- 2 papel ---------- 3 tesoura
+
+        document.write(`<p> JOGADOR 1 </p>`)
+        x =  Math.floor(Math.random() * (3-1+1) + 1);
+        document.write(`<img src="${x}.png" width="100px">`)
+
+
+        document.write(`<p> JOGADOR 2 </p>`)
+        y =  Math.floor(Math.random() * (3-1+1) + 1);
+        document.write(`<img src="${y}.png" width="100px">`)
+
+       if  (x + y ==4  && x==1){
+        document.write(`<p style="color:red"> O vencedor é: Jogador 1 </p>`)
+       } else if  (x + y ==4  && y==1){
+        document.write(`<p style="color:red"> O vencedor é: Jogador 2 </p>`) // fim pedra 1-3
+       } else if (x+ y == 3 && x == 2){
+        document.write(`<p style="color:red"> O vencedor é: Jogador 1 </p>`)
+        } else if (x+ y == 3 && y == 2){
+        document.write(`<p style="color:red"> O vencedor é: Jogador 2 </p>`) // fim do papel 1-2
+       } else if (x + y == 5 && x == 3){
+        document.write(`<p style="color:red"> O vencedor é: jogador 1 </p>`)
+       } else if (x + y == 5 && y == 3){
+        document.write(`<p style="color:red"> O vencedor é: jogador 2 </p>`) // fim da tesoura 2-3
+       } else {
+        document.write(`<p style="color:red"> Empate </p>`)
+       }
+       /* segunda parte da expressão depois do operador && é usada para filtrar qual jogador é vencedor*/
+       
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

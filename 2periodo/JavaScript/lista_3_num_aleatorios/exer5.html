@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        qtdAlunos = prompt("Quantos alunos tem?")
+        nomes=[];
+        idades=[];
+        soma = 0;
+        for (i = 0; i<qtdAlunos; i++){
+            nomes.push(prompt(`Qual o nome do aluno` ))
+            idade = parseInt(prompt(`Qual a idade do aluno`))
+            soma = soma + idade;
+            idades.push(idade)
+        }
+        media = Number ((soma/qtdAlunos).toFixed(2));
+        document.write(`<p> Media das idades: ${media}</p>`);
+
+        document.write(`<p> Nome dos passageiros ${nomes}</p>`)
+        document.write(`Idade dos passageiros ${idades}</p>`)
+
+
+    </script>
+</head>
+<body>
+    <!--https://www.w3schools.com/jsref/jsref_obj_array.asp-->
+</body>
+</html>
