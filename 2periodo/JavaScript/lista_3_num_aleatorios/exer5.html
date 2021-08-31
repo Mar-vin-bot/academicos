@@ -22,6 +22,13 @@
         document.write(`<p> Nome dos passageiros ${nomes}</p>`)
         document.write(`Idade dos passageiros ${idades}</p>`)
 
+        x = Math.floor((Math.random() * ((qtdAlunos-1)-0+1)) + 0);
+        /*como o vetor (nomes) vai até (qtdAlunos - 1) assim a equação acima faz gerar numeros de (0 até qtdAlunos - 1) Se colocasse somente a variavel qtdAlunos daria certo tbm*/
+
+        document.write(`<p> O aluno contemplado foi: ${nomes[x]}</p>`)
+
+
+
 
     </script>
 </head>
