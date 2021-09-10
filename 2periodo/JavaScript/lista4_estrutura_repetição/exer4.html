@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        h=["Tião","Juca","Perl","Leo"]
+        m=["Rose","Jane", "Ana","Bea"]
+        
+        hs=[]
+        ms=[]
+        
+        /* organiza elemento em ordem alfabetica tbm podendo ser .reverse()*/
+        // https://www.w3schools.com/js/js_array_sort.asp
+
+        for (i  in h){
+        hs[i] = h.sort()
+        }
+
+        for (i  in m){
+        ms[i] = m.sort()
+        }
+
+    document.write(`<div class="g">`)
+        
+
+        document.write(`<div class="m">`)
+
+        for (i in m){
+        document.write(`<div class="divm"> <p>${m[i]}</p></div>`)
+         }
+        document.write(`</div>`)
+
+         // div dos homens
+         
+        document.write(`<div class="h">`)
+        for (i in h){
+        document.write(`<div class="divh"><p>${h[i]}</p></div>`)
+         }
+        document.write(`</div>`)
+
+
+
+    document.write(`</div>`)
+
+
+
+
+    </script>
+    <style>
+        .g{
+            /*border: solid 3px black;*/
+            display: flex;
+            padding: 0% 20% 0% 20%;
+
+        }
+        .h, .m{
+            width: 50%;
+            /*border: solid 3px blue;*/
+            text-align: center;
+            margin: 5px;
+        }
+        .divh{
+            border: solid 1px blue;
+            margin-bottom: 3px;
+        }
+        .divm{
+            border: solid 1px purple;
+            margin-bottom: 3px;
+
+
+        }
+
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

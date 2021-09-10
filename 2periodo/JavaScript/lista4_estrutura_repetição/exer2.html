@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        cod=["P2","AP","POO1","FBD","JSB"]; /*i*/
+        dis=["Projeto Sistema Web MVC e SQL","Algoritmos e Programação","Programação Orientada a Objetos 1","Fundamentos de Banco de Dados","JavaScript Básico"]; /*j*/
+
+    document.write(`<table>`)
+        document.write(`<tr>`)
+            document.write(`<th> Cod </th>`)
+            document.write(`<th> Disciplina </th>`)
+        document.write(`</tr>`)
+
+        for (i=0;i<cod.length; i++){
+            document.write(`<tr>` )
+            document.write(`<td> ${cod[i]} </td>`)
+            document.write(`<td> ${dis[i]} </td>`)
+            document.write(`</tr>`)
+    }
+    document.write(`</table>`)
+
+    </script>
+    <style>
+        table, th, td{
+            border:1px solid ;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
