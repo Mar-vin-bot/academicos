@@ -1,0 +1,24 @@
+.borda{
+    width: 30%;
+    text-align: center;
+
+}
+.divImg{
+    margin-top: 10%;
+}
+.divTexto{
+    width: 30%;
+    margin-top: 10%;
+}
+footer, img{
+    text-align: center;
+}
+footer, p{
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+footer{
+    margin-top: 10%;
+}
