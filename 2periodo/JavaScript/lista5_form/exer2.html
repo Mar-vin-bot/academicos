@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function mostrarResultado(){
+            n1 = document.getElementById("nota1").value;
+            n2 = document.getElementById("nota2").value;
+            res = parseFloat(n1) + parseFloat(n2)
+            //res = Number(n1) + Number(n2) //tbm funciona (N - MAIUSCULO)
+            
+            if (n1 > 50 || n2 > 50){
+                alert("Nota invalida")
+            }else if (res < 60){
+                alert("Aluno reprovado")
+            }else {
+                alert("Aluno aprovado")
+            }
+            console.log(res)
+        }
+
+    </script>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td> <label for="nota1">1º Bimestre</label>  
+                    <input type="number" id="nota1"></td>
+            </tr>
+            <tr>
+                <td><label for="nota2"> 2º Bimestre</label>
+                    <input type="number" id="nota2"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Resultado" onclick="mostrarResultado()"></td>
+            </tr>
+        </table>
+
+    </form>
+</body>
+</html>

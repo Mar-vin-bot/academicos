@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+                        /* outra forma de escrever msm cod*/
+
+        /*function adicao(){                //((menos linha))
+            v1 = Number(document.getElementById("vl1").value) + Number(document.getElementById("vl2").value)
+            document.getElementById("resultado").value = v1;
+        }*/
+
+        function adicao(){
+            v1 = document.getElementById("vl1").value 
+            v2 = document.getElementById("vl2").value
+            s = Number(v1) + Number(v2)
+            if (v1 =="" || v2 ==""){
+                alert("Digite um número nos campos valor.")
+                document.getElementById("vl1").focus();
+            }
+                document.getElementById("resultado").value = s;
+        }
+        function subtracao(){
+            v1 = document.getElementById("vl1").value
+            v2 = document.getElementById("vl2").value
+            s = Number(v1) - Number(v2)
+            if (v1 =="" || v2 ==""){
+                alert("Digite um número nos campos valor.")
+                document.getElementById("vl1").focus();
+            }
+                document.getElementById("resultado").value = s;
+        }
+        function multiplicacao(){
+            v1 = document.getElementById("vl1").value
+            v2 = document.getElementById("vl2").value
+            s = Number(v1) * Number(v2)
+            if (v1 =="" || v2 ==""){
+                alert("Digite um número nos campos valor.")
+                document.getElementById("vl1").focus();
+            }
+                document.getElementById("resultado").value = s;
+        }
+        function divisao(){
+            v1 = document.getElementById("vl1").value
+            v2 = document.getElementById("vl2").value
+            s = Number(v1) / Number(v2)
+            if (v1 =="" || v2 ==""){
+                alert("Digite um número nos campos valor.")
+                document.getElementById("vl1").focus();
+            }else if (v2 == "0"){
+                alert("Digite um numero diferente de ZERO.")
+                document.getElementById("vl2").focus();
+            }
+                document.getElementById("resultado").value = s;
+        }
+    </script>
+</head>
+<body>
+    <table>
+    <tr>
+        <th>Calculadora</th>
+    </tr>
+    <tr>
+        <td><label for="vl1">1º Valor</label>
+            <input type="number" id="vl1"> </td>
+    </tr>
+    <tr>
+        <td><label for="vl2">2º Valor</label>
+            <input type="number" id="vl2"> </td>
+    </tr>
+    <tr>
+        <td> <input type="button" value=" + " onclick="adicao()"> 
+             <input type="button" value=" - " onclick="subtracao()"> 
+             <input type="button" value=" * " onclick="multiplicacao()"> 
+             <input type="button" value=" / " onclick="divisao()"> </td>
+    </tr>
+    <tr>
+        <td><label for="resultado">Resultado:</label>
+            <input type="number" id="resultado"> </td>
+    </tr>
+    </table>
+</body>
+</html>

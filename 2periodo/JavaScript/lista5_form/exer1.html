@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function mostrarDobro() {
+            valor = document.getElementById("txtValor").value;
+            if (valor == "") 
+                alert("Valor inválido! Digite um número");
+        document.getElementById("txtValor").focus(); //.focus() faz o cursos ir para o compoId informado
+        
+                document.getElementById("txtResultado").value = valor*2;
+            }
+    </script>
+</head>
+<body>
+
+<form>
+    <table>
+    <tr>
+        <td> <label for="txtValor">Digite um valor:</label>
+        <input type="text" id="txtValor"> </td>
+    </tr>
+ 
+    <tr>
+        <td><input type="button" value="Mostrar dobro" onclick="mostrarDobro()" ></td>
+    </tr>
+
+    <tr>
+        <td><label for="txtResultado"> Dobro do valor</labe>
+        <input type="text" id="txtResultado"> </td>
+    </tr>
+
+    </table>
+</form>
+</body>
+    
+</html>

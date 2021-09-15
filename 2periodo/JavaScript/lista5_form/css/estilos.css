@@ -1,0 +1,30 @@
+table{
+    border: black 1px solid;
+    margin: auto;
+}
+th{
+    color: blue;
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    
+}
+span{
+    font-size: 10px;
+    color: red;
+    font-family: Verdana;
+}
+
+tr{
+    text-align: right;
+}
+.bot{
+    text-align: center;
+}
+.log{
+    text-align: center;
+}
+.text-input{
+    width:67.5%;
+  }
+

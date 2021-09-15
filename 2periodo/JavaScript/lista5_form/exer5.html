@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    
+    <!--<script>
+        function mostrarEntrar(){
+            user = document.getElementById("login").value
+            s = document.getElementById("senha").value
+            conf = document.getElementById("confSenha").value
+
+            if (user ==""){
+                alert("Digite sua credencial de email.")
+                document.getElementById("login").focus();
+             }else if (s == "" || conf == ""){
+                alert("Campo obrigatorio vazio, favor digite sua senha e confirme.")
+                document.getElementById("senha").focus();
+            }else if (s !== conf){
+                alert("Autorização negada.")
+                document.getElementById("senha").focus();
+            }else{
+                alert("Credencias autorizadas.")
+            }
+        }
+
+    </script>-->
+</head>
+<body>
+     <main>
+        <form>
+        <table>
+            <tr>
+            <th>Acesso ao Sistema</th>
+            </tr>
+            <tr class="">
+                <td><label for="login">Login:</label>
+                    <input class="text-input" type="email" id="login" placeholder="e-mail" required> </td>
+            </tr>
+            <tr>
+                <td><label for="senha">Senha:</label>
+                    <input type="password" id="senha" maxlength="8"> <span>(max.8 caracteres)</span> </td>
+            </tr>
+            <tr class="bot">
+                <td><label for="confSenha">Confirmar Senha:</label>
+                    <input type="password" id="confSenha" maxlength="8" ><span>(max.8 caracteres)</span> </td>
+            </tr>
+            <tr class="bot">
+                <td><input type="submit" value="Entrar" onclick="mostrarEntrar()">
+                    <input type="reset" value="Limpar"> </td>
+            </tr>
+        </table>
+
+    </form>
+
+    </main>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
