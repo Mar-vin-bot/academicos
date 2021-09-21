@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label{
+            display:block;
+        }
+        p{
+            color: red;
+        }
+        body{
+            width: 50%;
+            margin: auto;
+
+        }
+        fieldset{
+            border: black 3px solid;
+            background-color: white;
+        }
+        .div{
+            border: red 2px solid;
+            text-align: center;
+        }
+        legend{
+            font-weight: bold;
+            color: purple;
+            font-size: 20px;
+        }
+
+    </style>
+    <script>
+        function verificar(){
+            // Obter todas os inputs do document
+            vet_inputs = document.getElementsByTagName("input"); //caputura tds tgs input em forma de vet
+            vet_radio = document.getElementsByName ("sexo").value
+            for (i=0; i<vet_inputs.length; i++)
+                if ((vet_inputs[i].type == "text") && (vet_inputs[i].value == "")) {
+                    alert(`${vet_inputs[i].name} está vazio!!!`);
+                    break;
+                }
+            for (i=0; i< vet_radio; i++)
+                if (vet_radio[i].checked){
+                    console.log("Escolheu: " + vet_radio[i].value);
+                    break;
+                }
+            }
+    </script>
+</head>
+<body>
+    <div class="div">
+    <h1>Cadastro de Clientes</h1>
+ 
+    <p> Todos os Campos são de preenchimento obrigatório</p>
+    </div>
+    <form>
+<fieldset>
+    <legend>Dados Pessoais</legend> 
+<label for="textName">Nome:</label>
+<input type="text" id="textName" maxlength="40" required placeholder="Nome completo" name="Nome">
+
+
+<!--<label for="dat">Data de Nascimento:</label>
+<input type="date" id="dat" required name="Nascimento">-->      
+
+
+<!--<p>Sexo</p>
+
+<label for="sexoM">Masculino</label>
+<input type="radio" name="sexo" id="sexoM">
+
+<label for="sexoF">Feminino</label>
+<input type="radio" name="sexo" id="sexoF">-->
+
+<label for="sexo" >Sexo:</label>
+
+<label for="fem">Feminino</label>
+<input type="radio"  id="fem"  name="Sexo" required>
+
+<label for="mas" >Masculino</label>
+<input type="radio"  id="mas"  name="Sexo" required>
+</fieldset>
+
+
+<fieldset>
+<legend>Informações de Contato</legend>
+<label for="email">Email:</label> 
+<input type="text" id="email" required name="Email">
+
+<Label for="tele">Celular</Label>
+<input type="text" id="tele" maxlength="9" required min="1" placeholder="Apenas números (max 9)" name="Celular">
+
+<label for="site">Web Site:</label>
+<input type="text" id="site" required name="Web Site">
+</fieldset>
+
+
+
+<fieldset>
+<legend>Localização</legend>
+<label for="end">Endereço:</label>
+<input type="text" id="end" required name="Endereço">
+
+<label for="num"> Número:</label>
+<input type="text" id="num" min="1" max="9999" required name="Número">
+
+<label for="cid">Cidade:</label>
+<input type="text" id="cid" required name="Cidade">
+
+<label for="est">Estado</label>
+<select id="est">
+    <option>Selecione</option>
+    <option>Acre </option>
+    <option>Alagoas</option>
+    <option>Amapá</option>
+    <option>Amazonas    </option>
+    <option>Bahia    </option>
+    <option>Ceará    </option>
+    <option>Distrito Federal    </option>
+    <option>Espírito Santo    </option> 
+    <option>Goiás    </option>
+    <option>Maranhão    </option>
+    <option>Mato Grosso    </option>
+    <option>Mato Grosso do Sul    </option>
+    <option>Minas Gerais          </option>
+    <option>Pará                  </option> 
+    <option>Paraíba               </option>
+    <option> Paraná               </option>
+    <option>Pernambuco            </option>
+    <option>Piauí                 </option>
+    <option>Rio de Janeiro        </option>
+    <option>Rio Grande do Norte    </option> 
+    <option>Rio Grande do Sul     </option>
+    <option>Rondônia    </option>
+    <option>Roraima              </option>
+    <option>Santa Catarina    </option>
+    <option>São Paulo</option>
+    <option>Sergipe    </option>
+    <option>Tocantins    </option>
+
+</select>
+</fieldset>
+
+<fieldset>
+    <legend>Sugestões</legend>
+    <textarea rows="4" cols="83" name="cx"> </textarea>
+</fieldset>
+
+
+<fieldset>
+    <legend>Enviar</legend>
+<input type="submit" value="Cadastrar" onclick="verificar()">
+ 
+<input type="reset" value="Limpar">
+</fieldset>
+
+
+    </form>
+    
+</body>
+</html>
