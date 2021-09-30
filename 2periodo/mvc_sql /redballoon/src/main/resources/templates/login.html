@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <style>
+            *{
+                box-sizing: 0px;
+                padding: 0px;
+            }
+
+        .entrar{
+          margin-top: 20px;
+          padding: 2px;
+        }
+            
+        .boxLogin{
+            background-color: rgba(238, 6, 6, 0.61) ;
+            width: 300px;
+            height: 255px;
+            margin-left: 100px;
+            /*margin-top: 200px;*/
+            border-radius: 50px;
+            text-align: center;
+            padding: 20px;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        img, div{
+            margin-left: 0px;
+            padding: 0px;
+        }
+        .div{
+            padding: 0px;
+            /*border: solid 3px red;*/
+        }
+        input[type="text"], input[type="password"]{
+            width:90%;
+            margin: auto;
+            margin-top: 20px;
+        }
+        footer{
+            background-color: blue;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .botFoot{
+            background-color:red;
+            border-radius: 50px;
+            width: 300px;
+            height: 50px;
+            font-style: italic;
+            margin-bottom: 50px;
+            margin-top: 50px;
+            color: white
+
+        }
+        footer p{
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        }
+        .divFoot{
+            height:200px;
+        }
+        .linkSenha{
+            margin-top: 80px;
+            list-style: none;
+        }
+
+        footer{
+            border-top: 1px solid grey;
+            text-align: center;
+            padding: 20px;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="https://redballoon.com.br"><img src="/src/main/resources/static/imagem/logo.png"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <!--<li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>-->
+              <!--<li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>-->
+              <!--<li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>-->
+              <!--<li class="nav-item">
+                <a class="nav-link " href="#">Matricule-se</a>
+              </li>-->
+            </ul>
+            <form class="d-flex">
+              <!--<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">-->
+              <button class="btn btn-outline-success" type="submit">Matricule-se</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+        <div class="container div">           <!--maior div main-->
+        <div>
+        <img src="/src/main/resources/static/imagem/criança-estudando.jpg" width="700px" height="500px">
+        </div>
+        <!---------------------------------login---------------------------->
+        <div class="boxLogin">
+            <h4>Login</h4>
+            <form>
+                <input type="text" name="" id="" placeholder="Usuário">
+                <input type="password" name="" id="" placeholder="Senha">
+                <a href="index.html"> <input class="entrar" type="submit" value="Entrar"></a>
+            </form>
+           
+            <ul class="linkSenha">
+            <li>      
+                <a href="">Redefinir Senha</a>
+            </li>
+        </ul>
+        </div>
+    </div>                              <!--maior div main-->
+    </main>
+    <footer>
+        <div class="divFoot">
+            <a href="https://www.redballoon.com.br/unidades/"> <button  class="botFoot">Encontre a unidade mais próxima</button></a>
+            
+            <p>Mais de 80 unidade da Red Balloon em todo Brasil</p>
+        </div>
+
+    </footer>
+</body>
+
+<footer>
+  <img src="/src/main/resources/static/imagem/logo.png" alt="">
+</footer>
+</html>
