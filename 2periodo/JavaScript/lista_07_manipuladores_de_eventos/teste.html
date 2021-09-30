@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+     votos1 = 1;
+     votos2 = 1;
+     votos3 = 1;
+     votos4 = 1;
+
+function contVotos1() {             //MICKEY
+    exibir1(votos1++);
+}
+function exibir1(val) {
+     document.getElementById("cand").innerHTML = `<h5> Número de votos ${val}</h5>`;
+}
+function contVotos2() {             //MINIE
+    exibir2(votos2++);
+}
+function exibir2(val2) {
+     document.getElementById("cand2").innerHTML = `<h5> Número de votos ${val2}</h5>`;
+}
+function contVotos3() {             //PATETA
+    exibir3(votos3++);
+}
+function exibir3(val3) {
+     document.getElementById("cand3").innerHTML = `<h5> Número de votos ${val3}</h5>`;
+}
+function contVotos4() {             //PLUTO
+    exibir4(votos4++);
+}
+function exibir4(val4) {
+     document.getElementById("cand4").innerHTML = `<h5> Número de votos ${val4}</h5>`;
+}
+
+
+    </script>
+    <style>
+       *{
+            box-sizing:border-box ;
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            /*border: 2px solid black;*/
+            margin-top:17%;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+<div>
+    
+ <img src="img/candidato1.jpg" onclick="contVotos1()" width="150" height="200"> 
+    <p id="cand"></p>
+</div>
+<div>
+    <img src="img/candidato2.jpg" onclick="contVotos2()" width="150" height="200">
+    <p id="cand2"></p>
+</div>
+
+<div>
+    
+ <img src="img/candidato3.jpg" onclick="contVotos3()" width="150" height="200"> 
+    <p id="cand3"></p>
+</div>
+<div>
+    <img src="img/candidato4.jpg" onclick="contVotos4()" width="150" height="200">
+    <p id="cand4"></p>
+</div>
+        
+</div>
+</body>
+</html>
