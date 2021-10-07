@@ -2,17 +2,39 @@ package edu.redballoon.br.redballoon;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 
 
 @Controller
 public class Redballoon {
-    
+
     @RequestMapping("/")
-        public String alo(){
-            return "index";
-        }
-    
-    
+    public String exibeHome() {
+        return "index";
+    }
+
+    @RequestMapping("/matricula")
+    public String exibeMatricula() {
+        return "matricula";
+    }
+
+    @RequestMapping("/login")
+    public String exibeLogin() {
+        return "login";
+    }
+
+    @RequestMapping("/horarios")
+    public String exibeHorarios() {
+        return "horarios";
+    }
+
+    @RequestMapping("/financeiro")
+    public String exibeFinanceiro() {
+        return "financeiro";
+    }
+
+    @RequestMapping("/alterarSenha")
+    public String exibe_alterarSenha() {
+        return "alterarSenha";
+    }
+
 }

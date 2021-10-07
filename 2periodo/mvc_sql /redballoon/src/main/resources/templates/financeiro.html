@@ -1,171 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <title>Document</title>
 
-<style>
-    
-
-        .principal{
-            padding: 50px;
-            margin-bottom: 10px;
+    <style>
+        * {
+            box-sizing: 0px;
+            margin: 0px;
         }
 
-        .botoes{
+        .principal {
+            padding-bottom: 50px;
+            padding-top: 50px;
+
+        }
+
+        .botoes {
             padding: 15px;
         }
 
-
-
-        label{
-            display:block;
+        label {
+            display: block;
         }
 
-        .container{
+        .container {
             display: flex;
             justify-content: center;
             margin-top: 10px;
             border: 3px solid black;
         }
-        .div{
-            width: 1150px;
-            height: 350px;  
+
+        .div {
+            width: 500px;
+            height: 150px;
             padding-top: 0%;
         }
-        button{
+
+        button {
             text-align: justify;
         }
 
-        fieldset{
-            margin-top: 10px;   
+        fieldset {
+            margin-top: 10px;
+        }
+        option, legend {
+            font-size: 17px;
+        }
+        .dtVcto{
+            padding-top: 10px;
         }
 
 
 
-        .cabeca{
-        width: 100%;
-        height: 200px;
-        border-bottom: 1px solid grey;
-        
-    }
-    .propaganda{
-        width: 500px;
-        height: 160px;
-        border: 1px solid grey;
-        position: absolute;
-        margin: auto;
-        top: 10%;
-        left: 45%;
-        margin-top: -50px;
-        margin-left: -150px;
-    }
 
-    .div1 {
-        border: 1px solid black;
-        width: 100%;
-    
-    }
 
-    .nav1 {
-        text-align: center;
-        margin-bottom: 2%;
-        
-    }
+        .cabeca {
+            width: 100%;
+            height: 200px;
+            border-bottom: 1px solid grey;
 
-    .nav{
-        padding-top: 20px;
-        margin-left: 10px;
-        box-sizing: border-box;
-        text-align: center;
-    }
-
-    .lembrete{
-        border-bottom: 2px solid grey;
-        text-align: center;
-        font-size: 40px;
-        
-    }
-
-    ul {
-        list-style-type: circle;
-    }
-
-    footer{
-        border-top: 1px solid grey;
-        text-align: center;
-        padding: 20px;
         }
 
+        .propaganda {
+            width: 500px;
+            height: 160px;
+            border: 1px solid grey;
+            position: absolute;
+            margin: auto;
+            top: 10%;
+            left: 45%;
+            margin-top: -50px;
+            margin-left: -150px;
+        }
 
-</style>
+        .div1 {
+            border: 1px solid black;
+            width: 100%;
+
+        }
+
+        .nav1 {
+            text-align: center;
+            margin-bottom: 2%;
+
+        }
+
+        .nav {
+            padding-top: 20px;
+            margin-left: 10px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .lembrete {
+            border-bottom: 2px solid grey;
+            text-align: center;
+            font-size: 40px;
+
+        }
+
+        ul {
+            list-style-type: circle;
+        }
+
+        footer {
+            border-top: 1px solid grey;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
 
 
 
 </head>
+
 <body>
 
     <header>
-        <div class="cabeca" >
-            <img class="propaganda" src="/src/main/resources/static/imagem/19003_banner_matriculas_red_ballon_2021_1222x577px_v2.jpeg" alt="redballoon">
+        <div class="cabeca">
+            <img class="propaganda" src="/imagem/19003_banner_matriculas_red_ballon_2021_1222x577px_v2.jpeg"
+                alt="redballoon">
         </div>
-    
+
 
     </header>
 
     <main>
         <div class="d-flex align-items-start nav2">
             <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                <a href="index.html"><button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Início</button></a>
-              <p class="nav1">Perfil</p>
-                <a href="matricula.html"><button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Dados Pessoais</button></a>
-                <a href="alterarSenha.html"><button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Alterar Senha</button></a>
-              <p class="nav1">Acadêmico</p>
-                <a href="horarios.html"><button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Horários</button></a>
-                <a href="financeiro.html"><button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Financeiro</button></a>
+                <a href="/"><button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
+                        aria-selected="true">Início</button></a>
+                <p class="nav1">Perfil</p>
+                <a href="matricula"><button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
+                        aria-selected="false">Dados Pessoais</button></a>
+                <a href="alterarSenha"><button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages"
+                        aria-selected="false">Alterar Senha</button></a>
+                <p class="nav1">Acadêmico</p>
+                <a href="horarios"><button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
+                        aria-selected="false">Horários</button></a>
+                <a href="financeiro"><button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages"
+                        aria-selected="false">Financeiro</button></a>
             </div>
-            
+
             <div>
-                <h1 class="principal">Financeiro</h1>
-    
+                <h2 class="principal">Financeiro</h2>
+
                 <form>
                     <div class="container">
-        
-                        <div class="div">
-    
-        
-            <fieldset>
-                <legend>Informações financeiras</legend>
-        
-                <label for="pga">Forma de pagamento</label>
-                    <input type="radio" name="pga" id="bol" required><label for="bol">Boleto</label>
-                    <input type="radio" name="pga" id="cc" required><label for="cc">Cartão de crédito</label>
-                    <input type="radio" name="pga" id="carne" required><label for="carne">Carne</label>
-                    <input type="radio" name="pga" id="pix" required><label for="pix">Pix</label>
-                
-                <label for="datPag">Dia de vencimento:</label>
-                    <input type="number" id="datPag" min="1" max="30"required placeholder="Dia" > 
-            </fieldset>
-        </div>
-        
-             </div>          
-        
-        <div class="botoes">
-            <input type="submit" value="Cadastrar">
-            <input type="reset" value="Limpar">
-        </div>
-        
 
+                        <div class="div">
+
+
+                            <fieldset>
+                                <legend>Informações financeiras</legend>
+
+
+                                <select class="form-select form-select-sm" aria-label=".form-select-lg example">
+                                    <option selected>Selecione</option>
+                                    <option value="1">Cartão de Crédito</option>
+                                    <option value="2">Pix</option>
+                                    <option value="3">Boleto</option>
+                                    <option value="4">Carnê</option>
+
+                                </select>
+
+                                <label for="datPag" class="dtVcto">Dia de vencimento:</label>
+                                <input type="number" id="datPag" min="1" max="30"required placeholder="Dia" >
+
+                                <input type="button" value="Confirmar">
+
+                            </fieldset>
+                        </div>
+                    </div>
             </div>
-        </div>
     </main>
 </body>
 
 <footer>
-    <img src="/src/main/resources/static/imagem/logo.png" alt="">
-  </footer>
+    <img src="/imagem/logo.png" alt="">
+</footer>
+
 </html>
