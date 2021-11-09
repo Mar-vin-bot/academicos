@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.apresentation {
+  background-size: cover;
+  height: calc(100vh - 72px);
+  background-image: url("../images/background.jpg");
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1366px) {
+  .card-init {
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-position-x: -15px;
+    background-image: url("../images/caminho.png");
+  }
+  
+  .card-middle {
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-position-x: -40px;
+    background-image: url("../images/caminho.png");
+  }
+  
+  .card-end {
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position-y: 135px;
+    background-position-x: -90px;
+    background-image: url("../images/caminho.png");
+  }
+}
