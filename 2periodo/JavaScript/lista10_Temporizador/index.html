@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    i = 2       //começando do 2 para não ficar 2 dobro de segundos esperando a 1º troca
+    function action() {
+        cron = setInterval("mudar()", 1000)
+        //setInterval(varCar, 3000)
+    }
+    function mudar() {
+        do {
+            if (i > 3) { //if usado para manter laço infinito
+                i = 1
+            }
+            document.getElementById("fotos").src = `imagens/${i}.jpg`
+            if (i == 1) {
+                document.getElementById("car").innerHTML = "Corolla"
+            } else if (i == 2) {
+                document.getElementById("car").innerHTML = "Civic"
+            } else if (i == 3) {
+                document.getElementById("car").innerHTML = "Focus"
+            }
+            i++
+        }
+        while (i > 4)
+    }
+    function pause(){
+        clearInterval(cron);
+    }
+</script>
+<style>
+    h1{
+        color: red;
+        text-align: center;
+    }
+    h3{
+        color: green;
+    }
+    div{
+        padding: 70px 25px 0px 0px;
+    }
+
+    .container {
+        width: 100vw;
+        /* (vw) largura maxima da viewport */
+        height: 100vh;
+        /* (vh) altura maxima da viewport */
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+</style>
+
+ <body onload=action()>
+
+<!--<body onload="setInterval('mudar()',1000)">-->
+    <h1>Lançamentos 2014 carro Sedã</h1>
+    <div class="container">
+        <div>
+            <img src="imagens/1.jpg" id="fotos" onmouseenter=pause() onmouseout=action()>
+            <!--corolla-->
+        </div>
+        <div>
+            <h3>Caracteristica do carro</h3>
+            <ul>
+                <li>Nome: <span id="car"> Corolla </span> </li>
+                <li>Potencia do motor: 155 cv</li>
+                <li>Garantia 3 anos</li>
+                <li>Consumo (cidade) não foi informado</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>
