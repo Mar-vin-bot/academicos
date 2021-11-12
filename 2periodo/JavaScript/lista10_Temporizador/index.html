@@ -21,10 +21,19 @@
             document.getElementById("fotos").src = `imagens/${i}.jpg`
             if (i == 1) {
                 document.getElementById("car").innerHTML = "Corolla"
+                document.getElementById("pot").innerHTML = "155cv"
+                document.getElementById("gar").innerHTML = "3"
+                document.getElementById("cons").innerHTML = "(cidade) não foi informado"
             } else if (i == 2) {
                 document.getElementById("car").innerHTML = "Civic"
+                document.getElementById("pot").innerHTML = "140cv"
+                document.getElementById("gar").innerHTML = "3"
+                document.getElementById("cons").innerHTML = "9,2 km/l"
             } else if (i == 3) {
                 document.getElementById("car").innerHTML = "Focus"
+                document.getElementById("pot").innerHTML = "172cv"
+                document.getElementById("gar").innerHTML = "5"
+                document.getElementById("cons").innerHTML = "8,5 km/l"
             }
             i++
         }
@@ -60,7 +69,7 @@
  <body onload=action()>
 
 <!--<body onload="setInterval('mudar()',1000)">-->
-    <h1>Lançamentos 2014 carro Sedã</h1>
+    <h1>Lançamentos 2014 - Carro Sedãs</h1>
     <div class="container">
         <div>
             <img src="imagens/1.jpg" id="fotos" onmouseenter=pause() onmouseout=action()>
@@ -70,9 +79,9 @@
             <h3>Caracteristica do carro</h3>
             <ul>
                 <li>Nome: <span id="car"> Corolla </span> </li>
-                <li>Potencia do motor: 155 cv</li>
-                <li>Garantia 3 anos</li>
-                <li>Consumo (cidade) não foi informado</li>
+                <li>Potencia do motor: <span id="pot">155 cv</span> </li>
+                <li>Garantia <span id="gar">3</span> anos</li>
+                <li>Consumo <span id="cons">(cidade) não foi informado</span></li>
             </ul>
         </div>
     </div>
