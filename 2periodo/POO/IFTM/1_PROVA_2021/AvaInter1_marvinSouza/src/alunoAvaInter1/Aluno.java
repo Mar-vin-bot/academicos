@@ -55,18 +55,14 @@ public void setMensalidade(double mensalidade) {
 }
 
 public void geraCodigo() {
-	char[] saida = new char[4];       
-    char[] cod = new char[nome.length()];
-    
-    for (int i=0;i<3; i++){
-        cod[i] = nome.charAt(i);
-        saida[i] = (char) (cod[i] + 2);             
-    }
-    
-    String pt1 = new String (saida);                 			  //3 primeiras letras
-    String pt2 = new String (String.valueOf(nome.length()));     //length do nome, passado para string
-    this.codigo = pt1+pt2;
-    //System.out.println(codigo);
+	codigo = "";  					//iniciar variavel
+	for (int i=0; i<3; i++) {
+		char temp = nome.charAt(i);
+		temp = (char) (temp + 2);  // (cast). temp = temp+2;
+		codigo  = codigo + temp;
+	}
+	codigo = codigo+nome.length();
+	
 }
 
 public String imprimeNome() {
@@ -87,7 +83,8 @@ public String imprimeNome() {
 	
 	
 	
-	return "Aluno "+nome.toUpperCase()+" - "+ lastName+" "+nome.toUpperCase().charAt(0)+".";
+	return "Aluno "+nome.toUpperCase()+" - "+ lastName+" "+nome.toUpperCase().charAt(0)+"."+
+			" Seu codigo é "+codigo+" Telefone: "+getTelefone()+" Mensalidade "+getMensalidade();
 }
 
 public double calcularMedia() {

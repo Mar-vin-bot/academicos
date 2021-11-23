@@ -67,6 +67,9 @@ public class AppAvaInter1 {
 				
 				if (op == 1) {
 					System.out.println(aluno1.imprimeNome());	
+					//System.out.println("O codigo do aluno é "+aluno1.getCodigo());
+					//System.out.println("A média do aluno é "+aluno1.calcularMedia());
+
 				}else if (op == 2) {
 					System.out.println(aluno1.calcularMedia());
 				}else if (op == 3) {
