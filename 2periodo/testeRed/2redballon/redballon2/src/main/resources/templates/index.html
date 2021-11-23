@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        margin-left: 40%;
+    }
+</style>
+
+<body>
+    <div>
+        <input type="text">
+        <button>Confirme</button>
+    </div>
+
+    <h1>Lista de Alunos</h1>
+
+    <table class="table table-dark table-hover">
+        <tr>
+            <th>ID</th>
+            <th>Nome do professor</th>
+            <th>Ações</th>
+        </tr>
+        <tr th:each="redModel:${redModel}" th:object="${redModel}">
+            <td th:text="*{nome}">1</td>
+            <td th:text="*{id}">2</td>
+            <td>
+                <a th:href="@{/editar-redModel(id=*{id})}">Editar</a>
+                <a th:href="@{/excluir-redModel(id=*{id})}">Excluir</a>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

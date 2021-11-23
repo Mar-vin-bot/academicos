@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-Redballon2Application<redballon2>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "iftm.edu.br.redballon2.Redballon2Application",
+            "projectName": "redballon2",
+            "args": ""
+        }
+    ]
+}
