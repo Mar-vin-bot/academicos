@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RED BALLOON - A MELHOR ESCOLA DE INGLÊS PARA SEU FILHO</title>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<body>
+    <!-- NAV COM IMAGEM -->
+    <!--<header>
+    <nav class="navbar navbar-expand-lg navbar-light b-light border-bottom-3 border border-blue">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="https://redballoon.com.br"><img
+                    src="/img/logo.png"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                </ul>
+                <form class="d-flex">
+                    <button class="btn btn-outline-success" type="submit">Logout</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>-->
+    <div th:insert="fragment/header::head"> </div>
+
+    <main>
+
+        <div class="container d-flex m-4 p-7 ">
+            <!-- Menu Lateral -->
+            <div th:insert="fragment/menuLat::mLateral"> </div>
+            <!-- LISTAGEM ALUNOS -->
+            <div class="col-10">
+                <div class="row mx-auto col-4">
+                </div>
+                <div class="row">
+                    <h1 class="col-9">
+                        <span class="col-10">Lista de alunos</span>
+                        <a type="button" class=" btn-lg btn-block btn btn-primary pull-right"
+                            th:href="@{/alunos/dados}">
+                            <i class="fa-lg far fa-plus-square"></i>
+                        </a>
+                    </h1>
+                </div>
+                <table class="table">
+
+                    <thead>
+                        <tr class="">
+                            <th class="col-1">ID</th>
+                            <th class="col-7">NOME</th>
+                            <th class="col-4 text-center">AÇÕES</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="aluno : ${alunos}" th:object="${aluno}">
+                            <td th:text="*{id}">ID</td>
+                            <td th:text="*{nome}">Nome</td>
+                            <td>
+                                <div class="row">
+                                    <a class=" col-6 btn btn-primary" th:href="@{/alunos/dados(id=*{id})}">Editar</a>
+                                    <a class=" col-6 btn btn-danger"
+                                        th:href="@{/alunos/dados/excluir(id=*{id})}">Excluir</a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    </main>
+
+    <!-- Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <div th:insert="fragment/footer::foot"> </div>
+</body>
+
+
+
+</html>

@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-RedballoonApplication<redballoon>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.lauracristina.redballoon.RedballoonApplication",
+            "projectName": "redballoon",
+            "args": ""
+        }
+    ]
+}
