@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/function.js"> </script>
+    <style>
+        input {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <label for="txtNome">Nome</label>
+            <input type="text" id="txtNome">
+
+            <label for="txtRa">RA</label>
+            <input type="number" id="txtRa" maxlength="09">
+
+            <label for="txt1b">1º Bimestre</label>
+            <input type="number" id="txt1b">
+
+            <label for="txt2b">2º Bimestre</label>
+            <input type="number" id="txt2b">
+
+            <input type="button" value="Cadastrar" onclick="validar()">
+        </form>
+    </div>
+        <a href="listar.html"> Listar</a>
+    
+
+</body>
+
+</html>
