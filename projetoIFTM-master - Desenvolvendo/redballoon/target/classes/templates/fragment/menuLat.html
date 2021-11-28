@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<style>
+*{
+        box-sizing: 0px;
+        padding: 0px;
+}
+
+</style>
+
+<body>
+    <div class="">
+        <div th:fragment="mLateral"
+            class="m-4 p-2 text btn-group-vertical col-10 d-flex justify-content-center align-items-center flex-column text-light">
+            <button type="button" class="btn btn-primary"><a class="text-light" href="/responsavel">DADOS
+                    PESSOAIS</a></button>
+            <button type="button" class="btn btn-primary"><a class="text-light" href="/listar">ALUNOS</a></button>
+            <button type="button" class="btn btn-primary"><a class="text-light" href="alterarSenha.html">ALTERAR
+                    SENHA</a></button>
+            <button type="button" class="btn btn-primary"><a class="text-light" href="boletim">BOLETIM
+                    ESCOLAR</a></button>
+            <button type="button" class="btn btn-primary"><a class="text-light" href="/horarios">HORÁRIOS</a></button>
+            <button type="button" class="btn btn-primary"><a class="text-light"
+                    href="/financeiro">FINANCEIRO</a></button>
+        </div>
+</div>
+</body>
+
+</html>

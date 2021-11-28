@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jwifi.js"> </script>
+    <script>
+        function validar() {
+            nasc = document.getElementById("dtNasc").value
+            padrao = /^\d{2}\/\d{2}\/\d{2}$/;
+            padrao1 = /^\d{2}\/\d{2}\/\d{4}$/;
+            (padrao.test(nasc) || padrao1.test(nasc)) ? alert("valida") : alert("invalido")
+
+        }
+
+        function validarCpf() {
+
+            vcpf = document.getElementById("numCpf").value
+            padrao = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/;
+            (padrao.test(vcpf)) ? alert("valida") : alert("invalido")
+        }
+
+        function validarMat() {
+            mat = document.getElementById("numMat").value
+            padrao = /^iftm-\d{3}\/\d{3}-\w{2}$/i;
+            (padrao.test(mat)) ? alert("valida") : alert("invalido")
+
+        }
+
+        function validaDisc() {
+            vdisc = document.getElementById("disc").value
+            padrao = /^MT-\d{2}\.\d{3}-IFTM$/i;
+            (padrao.test(vdisc)) ? alert("valida") : alert("invalido")
+
+        }
+
+        function validaDisc2 () {   //V2 - E
+            vdisc2 = document.getElementById("disc2").value
+            padrao = /^MT-\d{2}\.\d{3}-(IFTM|iftm)$/;
+            (padrao.test(vdisc2)) ? alert("valida") : alert("invalido")
+
+        }
+
+        function validaDisc3() {    //V3 f
+            vdisc3 = document.getElementById("disc3").value
+            padrao = /^M\s?T-\d{2}\.\d{3}-I\s?F\s?T\s?M$/i;
+            (padrao.test(vdisc3)) ? alert("valida") : alert("invalido")
+
+        }
+
+        function validaDisc4() {    //V4 g
+            vdisc4 = document.getElementById("disc4").value
+            padrao = /^M\s?T-\d{2}.\d{3}-I\s?F\s?T\s?M\s(Uberlândia Centro|Uberlândia)$/;
+            (padrao.test(vdisc4)) ? alert("valida") : alert("invalido")
+
+        }
+
+        function validaIftm() {    
+            viftm = document.getElementById("iftm").value
+            padrao = /^(IFTM campus Uberlândia|IFTM campus Uberlândia Centro)$/;
+            (padrao.test(viftm)) ? alert("valida") : alert("invalido")
+
+        }
+
+        function validaTel() {    
+            ntel = document.getElementById("tel").value
+            padrao = /^\+\d{2}\(\d{2}\)\d{5}-\d{4}$/;
+            (padrao.test(ntel)) ? alert("valida") : alert("invalido")
+
+        }
+        function validaTel2() {    
+            ntel2 = document.getElementById("tel2").value
+            padrao = /^\(\d{2,3}\)\d{5}-\d{4}$/;
+            (padrao.test(ntel2)) ? alert("valida") : alert("invalido")
+
+        }
+
+        function validaAlt() {    
+            altura = document.getElementById("alt").value
+            padrao = /^[1-2](,|.)\d{1,2}$/;
+            (padrao.test(altura)) ? alert("valida") : alert("invalido")
+
+        }
+
+        function validaFat() {    
+            vfat = document.getElementById("fat").value
+            padrao = /^\d{0,3}?\.\d{0,3}?\d{0,3}$/;
+            //padrao = /^[0-999.999.999.999,22]{3-14}$/;
+            (padrao.test(vfat)) ? alert("valida") : alert("invalido")
+
+        }
+
+        function validaCro() {    
+            cron = document.getElementById("cro").value
+            padrao = /^\d{2}\:\d{2}\:\d{2}\:\d{2}$/;
+            (padrao.test(cron)) ? alert("valida") : alert("invalido")
+
+        }
+
+
+
+
+    </script>
+    <style>
+        input {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <label for="dtNasc">a) Data de nascimento</label>
+        <input type="text" id="dtNasc" value="01/01/01">
+        <input type="button" value="VALIDAR" onclick="validar()">
+
+        <label for="numCpf">b) CPF</label>
+        <input type="text" id="numCpf" value="123.123.123-00" onkeypress="inserirMascara('numCpf','000.000.000-00')">
+        <input type="button" value="VALIDAR" onclick="validarCpf()">
+
+        <label for="numMat">c) Número de matrícula de um aluno</label>
+        <input type="text" id="numMat" value="IFTM-123/123-Y1">
+        <input type="button" value="VALIDAR" onclick="validarMat()">
+
+        <label for="disc">d) Código de uma disciplina do IFTM (jwifi)</label>
+        <input type="text" id="disc" value="MT-12.345-IFTM" onkeypress="inserirMascara('disc','MT-12.345-IFTM')">
+        <input type="button" value="VALIDAR" onclick="validaDisc()">
+
+        <label for="disc2">e) Código de uma disciplina do IFTM (versão 2)(jwifi)</label>
+        <input type="text" id="disc2" value="MT-12.345-iftm" onkeypress="inserirMascara('disc2','MT-12.345-IFTM')">
+        <input type="button" value="VALIDAR" onclick="validaDisc2()">
+
+        <label for="disc3">f) Código de uma disciplina do IFTM (versão 3)</label>
+        <input type="text" id="disc3" value="MT-12.345-iftm">
+        <input type="button" value="VALIDAR" onclick="validaDisc3()">
+
+        <label for="disc4">g) Código de uma disciplina do IFTM (versão 4)</label>
+        <input type="text" id="disc4" value="MT-12.345-IFTM Uberlândia">
+        <input type="button" value="VALIDAR" onclick="validaDisc4()">
+
+        <label for="iftm">h) Nome de campus do IFTM</label>
+        <input type="text" id="iftm" value="Uberlândia Centro">
+        <input type="button" value="VALIDAR" onclick="validaIftm()">
+
+        <label for="tel">i) Telefone (jwifi)</label>
+        <input type="text" id="tel" value="+55(34)99234-5678" onkeypress="inserirMascara('tel','+55(34)99598-6685')">
+        <input type="button" value="VALIDAR" onclick="validaTel()">
+
+        <label for="tel2">j) Telefone 2</label>
+        <input type="text" id="tel2" value="+55(34)99234-5678">
+        <input type="button" value="VALIDAR" onclick="validaTel2()">
+
+        <label for="alt">k) Altura </label>
+        <input type="text" id="alt" value="1,5">
+        <input type="button" value="VALIDAR" onclick="validaAlt()">
+
+        <label for="fat"> l) Faturamento anual de uma empresa: </label>
+        <input type="text" id="fat" value="">
+        <input type="button" value="VALIDAR" onclick="validaFat()">
+
+        <label for="cro">m) Cronômetro (jwifi)</label>
+        <input type="text" id="cro" value="12:12:12:12"  onkeypress="inserirMascara('cro','HH:MM:SS:CC')">
+        <input type="button" value="VALIDAR" onclick="validaCro()">
+
+
+        
+    </form>
+</body>
+
+</html>
