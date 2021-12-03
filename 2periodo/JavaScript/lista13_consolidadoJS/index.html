@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function verOpc() {
+        nome = document.getElementById("name").value
+        idade = document.getElementById("age").value
+        //hobbie = document.getElementById("op").value
+        hobby = document.getElementById("passTem").value
+
+        console.log(nome)
+        console.log(idade)
+        console.log(hobby)
+
+        if (nome == null || idade < 1 || idade > 130 || hobby == "Selecione") {
+            alert("Favor preencher os campos corretamente. ");
+        } else {
+            localStorage.setItem("varNome", nome)
+            localStorage.setItem("varHobbye", hobby)
+            window.open('aguarde.html', '_self');
+        }
+    }
+
+
+</script>
+<style>
+
+    .container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box {
+        width: 500px;
+        height: 500px;
+        padding: 50px;
+        padding-top: 0px;
+
+    }
+
+    input {
+        display: block;
+    }
+    input[type="reset"] {
+        background-color: black;
+        color: white;
+        display: inline;
+        border-radius: 5px;
+        margin-left: 5px;
+
+    }
+    input[type="button"] {
+        background-color: black;
+        color: white;
+        display: inline;
+        border-radius: 5px;
+        margin-left: 100px;
+
+    }
+
+    label {
+        color: blue;
+        font-weight: bold;
+    }
+
+    h1 {
+        font-weight: bold;
+        text-shadow: 0 0 0.2em yellow;
+    }
+
+    p {
+        color: red;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>Qual o seu perfil?</h1>
+            <p>OBS: Todas as informações são de preenchimento obrigatório</p>
+            <form>
+                <label for="name">Nome:</label>
+                <input type="text" id="name">
+
+                <label for="age">Idade:</label>
+                <input type="number" id="age">
+
+
+                <label for="passTem">Qaul seu passatempo predileto:</label>
+                <select id="passTem">
+                    <option id="">Selecione</option>
+                    <option id="">Passear no shopping</option>
+                    <option id="">Curtir a natureza</option>
+
+
+                    <input type="button" value="Ver opções de carro" onclick="verOpc()">
+                    <input type="reset" value="Limpar">
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

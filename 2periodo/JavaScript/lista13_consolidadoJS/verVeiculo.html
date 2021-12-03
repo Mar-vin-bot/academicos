@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        newNome = localStorage.getItem("varNome")
+        newHobby = localStorage.getItem("varHobbye")
+        console.log(newNome)
+        console.log(newHobby)
+
+        var carros = [          //obj da pos 0 a 3
+            { file: "civic.jpg", Fabricante: "Honda", Nome: "Civic", Potencia: "150 cv", Garantia: "3 anos", Consumo: "9,7 km/l" },
+            { file: "corolla.jpg", Fabricante: "Toyota", Nome: "Corolla", Potencia: "144 cv", Garantia: "3 anos", Consumo: "10, 6 km / l" },
+            { file: "troller.jpg", Fabricante: "Ford", Nome: "Troller", Potencia: "200 cv", Garantia: "3 anos", Consumo: "7,7 km/l" },
+            { file: "wrangler.jpg", Fabricante: "Jepp", Nome: "Wrangler", Potencia: "199 cv", Garantia: "2 anos", Consumo: "3,1 km/l" }
+        ];
+
+
+
+        if (newHobby == "Passear no shopping") {
+
+            g_carro = 0;
+            function trocaInfo() {
+
+                if (g_carro < 1) {
+                    g_carro++
+                } else
+                    g_carro = 0;
+                document.getElementById("fotos").src = "img/" + carros[g_carro].file;
+                document.getElementById("fab").innerHTML = carros[g_carro].Fabricante;
+                document.getElementById("car").innerHTML = carros[g_carro].Nome;
+                document.getElementById("pot").innerHTML = carros[g_carro].Potencia;
+                document.getElementById("gar").innerHTML = carros[g_carro].Garantia;
+                document.getElementById("con").innerHTML = carros[g_carro].Consumo;
+                setTimeout(trocaInfo, 2000);
+            }
+        }
+        if (newHobby == "Curtir a natureza") {
+
+            g_carro = 2;
+            function trocaInfo() {
+
+                if (g_carro < 3) {
+                    g_carro++
+                } else
+                    g_carro = 2;
+                document.getElementById("fotos").src = "img/" + carros[g_carro].file;
+                document.getElementById("fab").innerHTML = carros[g_carro].Fabricante;
+                document.getElementById("car").innerHTML = carros[g_carro].Nome;
+                document.getElementById("pot").innerHTML = carros[g_carro].Potencia;
+                document.getElementById("gar").innerHTML = carros[g_carro].Garantia;
+                document.getElementById("con").innerHTML = carros[g_carro].Consumo;
+                setTimeout(trocaInfo, 2000);
+            }
+        }
+
+
+
+        document.write(`<h1><span id="nome">  ${newNome}</span>, veja as opções para seu perfil.  </h1> `)
+
+        function voltar(){
+            window.open('index.html', '_self');
+        }
+
+    </script>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        h1{
+            text-align: center;
+        }
+        p{
+            font-weight: bold;
+        }
+        li{
+            font-weight: bold;
+        }
+        input[type="button"] {
+        background-color: black;
+        color: white;
+        display: inline;
+        border-radius: 5px;
+        margin-left: 25px;
+        width: 300px;
+        }
+
+    </style>
+
+</head>
+
+<body onload="trocaInfo()">
+    <main>
+        <div class="container">
+            <div>
+                <img id="fotos" src=" ">
+            </div>
+            <div class="info">
+                
+                <ul>
+                    <p> Caracterisca do Produto:</p>
+                    <li>Fabricante: <span id="fab"></span> </li>
+                    <li>Nome: <span id="car"> </span>   </li>
+                    <li>Potencia do Motor: <span id="pot"></span>   </li>
+                    <li>Garantia: <span id="gar"></span>    </li>
+                    <li>Consumo (cidade): <span id="con"></span>    </li>
+                </ul>
+                <input type="button" value="Mudar Perfil"  onclick="voltar()">
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
