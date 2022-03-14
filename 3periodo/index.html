@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+            async function getRanking() {
+            arquivo = await fetch("ranking.json")
+            conteudo  = await arquivo.json();           //await feito para esperar
+            //tabela = document.getElementById("tableClients")
+            
+        }
+    </script>
+</head>
+<body>
+    <h1>Selecione o nível de dificuldade para visualizar o ranking.</h1>
+    <form>
+        <select onchange="getRanking()">
+            <option>Easy</option>
+            <option>Medium</option>
+            <option>Hard</option>
+        </select>
+    </form>
+    
+    
+</body>
+</html>
