@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        btn = false
+        getRanking = async () => {   
+            arquivo = await fetch("ranking.json")
+            conteudo = await arquivo.json();     //await feito para esperar
+              
+            if (botaoClicado == true) {
+                var element = document.getElementById("cabecalho");
+                element.remove();
+
+                filtrarNivel.forEach(el => {
+                    element2 = document.getElementById("corpo");
+                    element2.remove();
+                })
+
+            }
+            btn = true;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Selecione o nível de dificuldade para visualizar o ranking.</h1>
+    <form>
+        <select>
+            <option>Easy</option>
+            <option>Medium</option>
+            <option>Hard</option>
+        </select>
+        <input type="button" value="Visualizar" id="" onchange="getRanking()">
+    </form>
+
+
+</body>
+
+</html>
