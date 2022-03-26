@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //usrTrabalhadores = { nome: userNome, idade: userIdade, sexo: userSexo, salario: userSal }  //objeto
+
+        let dados = [
+            {
+                "nome": "José da Silva",
+                "idade": 20,
+                "sexo": "M",
+                "salario": 2500.00
+            },
+
+            {
+                "nome": "Ana Maria",
+                "idade": 33,
+                "sexo": "F",
+                "salario": 5500.00
+            },
+
+            {
+                "nome": "Pedro Alcântara",
+                "idade": 22,
+                "sexo": "M",
+                "salario": 1500.00
+            },
+
+            {
+                "nome": "Maria da Silva",
+                "idade": 55,
+                "sexo": "F",
+                "salario": 7500.00
+            },
+            {
+                "nome": "Antônio Carlos",
+                "idade": 45,
+                "sexo": "M",
+                "salario": 1000.00
+            }
+        ];
+
+        document.write(`<h3 style="color: blue;">Exercício 1</h3>`)
+        document.write("<table style='border:1px solid black'>");
+        document.write("<th>Nome</th><th>Idade</th> <th>Sexo</th> <th>Salario</th>");
+
+        dados.forEach((funcao, index) => {
+            document.write(`
+        <tr>
+            <td> ${funcao.nome}</td> 
+            <td> ${funcao.idade}</td>
+            <td> ${funcao.sexo}</td> 
+            <td> ${funcao.salario}</td>
+        </tr>
+        `)
+        });
+
+        document.write("</table>")
+
+
+
+
+        document.write(`<h3 style="color: blue;">Exercício 2</h3>`)
+        //(tabela) parametro que recebe a tabela json
+        // o que é esse , 0
+
+        media = (tabela) => (tabela.reduce((acumulador, valor) => acumulador + valor.salario, 0) / tabela.length).toFixed(2)
+        document.write(media(dados))
+
+ /*        //resposta da 2 sem arrow function--  não da certo
+
+        function media(tabela) {
+            tabela.reduce(
+                function segundaFunc (acumulador, valor) {
+                    acumulador + valor.salario, 0 / tabela.length.toFixed(2)
+                })       
+        }
+        document.write(media(dados))
+*/
+        
+        document.write(`<h3 style="color: blue;">Exercício </h3>`)
+        salMaior = dados.filter((valor2) => (valor2.salario > 3000))
+        buscarNomes = salMaior.forEach(elemento => document.write(`<p> ${elemento.nome} </p>`))
+
+            
+
+
+
+
+
+
+
+
+       
+
+
+
+
+        /*
+                document.write(
+                    dados.filter(elemento => elemento.salario > 3000.00)
+        
+                );
+        */
+
+
+
+
+
+        filtrarNomes = trabalhadores.filter(elemento => elemento.salario > 3000)
+        exibirNomes = filtrarNomes.forEach(elemento => document.write(`<p>${elemento.nome}</p>`))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

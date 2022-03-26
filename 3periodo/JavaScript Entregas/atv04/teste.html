@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 2</title>
+    <script>
+        trabalhadores = [
+            {
+                "nome": "José da Silva",
+                "idade": 20,
+                "sexo": "M",
+                "salario": 2500
+            },
+            {
+                "nome": "Ana Maria",
+                "idade": 33,
+                "sexo": "F",
+                "salario": 5500
+            },
+            {
+                "nome": "Pedro Alcântara",
+                "idade": 22,
+                "sexo": "M",
+                "salario": 1500
+            },
+            {
+                "nome": "Maria da Silva",
+                "idade": 55,
+                "sexo": "F",
+                "salario": 7500
+            },
+            {
+                "nome": "Antônio Carlos",
+                "idade": 45,
+                "sexo": "M",
+                "salario": 1000
+            }
+        ]
+
+        // EXERCICIO 1
+        document.write(`<h3 style="color: blue;">Exercício 1</h3>`)
+        exibirTabela = (json) => {
+
+            document.write(`<table style='border:1px solid black; border-collapse: collapse'>`)
+            document.write(`<th style='border:1px solid black; border-collapse: collapse'>Nome Completo</th> <th style='border:1px solid black; border-collapse: collapse'>Idade</th> <th style='border:1px solid black; border-collapse: collapse'>Sexo</th> <th style='border:1px solid black; border-collapse: collapse'>Salário</th>`)
+            json.forEach((elemento, indice) => document.write(`<tr> <td style='border:1px solid black; border-collapse: collapse'>${elemento.nome}</td> <td style='border:1px solid black; border-collapse: collapse'>${elemento.idade}</td> <td style='border:1px solid black; border-collapse: collapse'>${elemento.sexo}</td><td style='border:1px solid black; border-collapse: collapse'>${(elemento.salario).toFixed(2)}</td></tr>`))
+            document.write("</table>")
+        }
+        exibirTabela(trabalhadores)
+
+        // EXERCICIO 2
+        
+        document.write(`<h3 style="color: blue;">Exercício 2</h3>`)
+        calcularMedia = json => (json.reduce((acumulador, valorAtual) => acumulador + valorAtual.salario, 0)/ json.length)
+        document.write(calcularMedia(trabalhadores))
+       
+
+
+        // EXERCICIO 3
+        document.write(`<h3 style="color: blue;">Exercício 3</h3>`)
+        filtrarNomes = trabalhadores.filter(elemento => elemento.salario > 3000)
+        exibirNomes = filtrarNomes.forEach(elemento => document.write(`<p>${elemento.nome}</p>`))
+
+        // EXERCICIO 4
+        document.write(`<h3 style="color: blue;">Exercício 4</h3>`)
+        filtrarHomens = trabalhadores.filter(elemento => elemento.sexo == "M")
+        exibirHomens = filtrarHomens.forEach(elemento => document.write(`<p>${elemento.nome}, ${elemento.idade}, ${elemento.sexo}, ${elemento.salario}</p>`))
+
+        // EXERCICIO 5
+        document.write(`<h3 style="color: blue;">Exercício 5</h3>`)
+        filtrarHomens = trabalhadores.filter(elemento => elemento.sexo == "F")
+        exibirHomens = filtrarHomens.forEach(elemento => document.write(`<p>${elemento.nome}, ${elemento.idade}, ${elemento.sexo}, ${elemento.salario}</p>`))
+
+        // EXERCICIO 6
+        document.write(`<h3 style="color: blue;">Exercício 6</h3>`)
+        filtrarSalario = trabalhadores.sort(function (a, b) { return a.salario - b.salario });
+        maiorSalario = filtrarSalario[filtrarSalario.length - 1]
+        document.write(`<p>${maiorSalario.nome}</p>`)
+
+        // EXERCICIO 7
+        document.write(`<h3 style="color: blue;">Exercício 7</h3>`)
+        menorSalario = filtrarSalario[0]
+        document.write(`<p>${menorSalario.nome}</p>`)
+
+        // EXERCICIO 8
+        document.write(`<h3 style="color: blue;">Exercício 8</h3>`)
+        filtrarCondicoes = trabalhadores.some(elemento => (elemento.sexo == "M") && (elemento.salario > 5000))
+        document.write(`<p>${filtrarCondicoes}</p>`)
+
+        // EXERCICIO 9
+        // Aumentar o salario dos trabalhadores de forma que: quem recebe R$3000,00 ou menos receberá um aumento de 15% e quem recebe mais receberá um aumento de 5%.<br> Exibir os dados dos trabalhadores em uma tabela junto com o salário antigo e o ajustado.
+        document.write(`<h3 style="color: blue;">Exercício 9</h3>`)
+        document.write(`<p style="color: olive;">Aumentar o salario dos trabalhadores de forma que: quem recebe R$3000,00 ou menos receberá um aumento de 15% e quem recebe mais receberá um aumento de 5%.<br> Exibir os dados dos trabalhadores em uma tabela junto com o salário antigo e o ajustado.</p>`)
+        ajustarPrecos = json => (json.map(valor => (valor.salario <= 3000 ? valor.salario * 1.15 : valor.salario * 1.05)));
+
+        salariosAjustados = ajustarPrecos(trabalhadores)
+
+        exibirTabela = (trabalhadores, salariosAjustados) => {
+            document.write(`<table style='border:1px solid black; border-collapse: collapse'>`)
+            document.write(`<th style='border:1px solid black; border-collapse: collapse'>Nome Completo</th> <th style='border:1px solid black; border-collapse: collapse'>Idade</th> <th style='border:1px solid black; border-collapse: collapse'>Sexo</th> <th style='border:1px solid black; border-collapse: collapse'>Salário Antigo</th> <th style='border:1px solid black; border-collapse: collapse'>Salário Ajustado</th>`)
+            trabalhadores.forEach((elemento, indice) => document.write(`<tr> <td style='border:1px solid black; border-collapse: collapse'>${elemento.nome}</td> <td style='border:1px solid black; border-collapse: collapse'>${elemento.idade}</td> <td style='border:1px solid black; border-collapse: collapse'>${elemento.sexo}</td> <td style='border:1px solid black; border-collapse: collapse'>${(elemento.salario).toFixed(2)}</td> <td style='border:1px solid black; border-collapse: collapse'>${salariosAjustados[indice].toFixed(2)}</td></tr>`))
+            document.write("</table>")
+        }
+        exibirTabela(trabalhadores, salariosAjustados)
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
