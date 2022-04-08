@@ -7,30 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        btn = false
-        getRanking = async () => {   
-            arquivo = await fetch("ranking.json")
-            conteudo = await arquivo.json();     //await feito para esperar
-              
-            if (botaoClicado == true) {
-                var element = document.getElementById("cabecalho");
-                element.remove();
 
-                filtrarNivel.forEach(el => {
-                    element2 = document.getElementById("corpo");
-                    element2.remove();
-                })
+        async function showNivel(filename) {
+            arquivo = await fetch("ranking.json");
+            conteudo = await arquivo.json();
+            tabela = document.getElementById("tabClients");
+            conteudo.players.filter(jogador => {
+                linha = document.createElement("tr");
 
-            }
-            btn = true;
+            showProducts(conteudo, -1);
         }
+
+        function readSelect() {
+            indiceNivel = document.getElementById("selectLevel").selectedIndex;
+            if (indiceNivel == 1) {
+                document.getElementById("")
+            }
+        }
+
+
     </script>
 </head>
 
 <body>
     <h1>Selecione o nível de dificuldade para visualizar o ranking.</h1>
     <form>
-        <select>
+        <select id="selectLevel" onchange="readSelect()">
             <option>Easy</option>
             <option>Medium</option>
             <option>Hard</option>
