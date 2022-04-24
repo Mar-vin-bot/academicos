@@ -72,22 +72,70 @@
         media = (tabela) => (tabela.reduce((acumulador, valor) => acumulador + valor.salario, 0) / tabela.length).toFixed(2)
         document.write(media(dados))
 
- /*        //resposta da 2 sem arrow function--  não da certo
 
-        function media(tabela) {
-            tabela.reduce(
-                function segundaFunc (acumulador, valor) {
-                    acumulador + valor.salario, 0 / tabela.length.toFixed(2)
-                })       
-        }
-        document.write(media(dados))
-*/
-        
-        document.write(`<h3 style="color: blue;">Exercício </h3>`)
+        document.write(`<h3 style="color: blue;">Exercício 3</h3>`)
         salMaior = dados.filter((valor2) => (valor2.salario > 3000))
         buscarNomes = salMaior.forEach(elemento => document.write(`<p> ${elemento.nome} </p>`))
 
-            
+
+        document.write(`<h3 style="color: blue;">Exercício 4</h3>`)
+        infoDados = () => {
+            dados.forEach((elemento, indice) => {
+                if (elemento.sexo == "M") {
+                    document.write(`<p>${elemento.nome} ${elemento.idade} ${elemento.sexo} ${elemento.salario}</p>`)
+                }
+            })
+        }
+        infoDados(dados);
+
+        document.write(`<h3 style="color: blue;">Exercício 5</h3>`)
+        infoDados = () => {
+            dados.forEach((elemento, indice) => {
+                if (elemento.sexo == "F") {
+                    document.write(`<p>${elemento.nome} ${elemento.idade} ${elemento.sexo} ${elemento.salario}</p>`)
+                }
+            })
+        }
+        infoDados(dados);
+
+        document.write(`<h3 style="color: blue;">Exercício 6</h3>`)
+        //https://www.w3schools.com/js/js_array_sort.asp
+
+        maxSal = dados.sort(function(a, b){ return a.salario - b.salario});
+        maiorSal = maxSal[maxSal.length-1]
+        document.write(`<p>${maiorSal.nome}</p>`)
+
+
+        document.write(`<h3 style="color: blue;">Exercício 7</h3>`)
+        //https://www.w3schools.com/js/js_array_sort.asp
+
+        maxSal = dados.sort(function(a, b){ return a.salario - b.salario});
+        maiorSal = maxSal[0]
+        document.write(`<p>${maiorSal.nome}</p>`)
+
+
+        document.write(`<h3 style="color: blue;">Exercício 8</h3>`)
+        //https://www.w3schools.com/jsref/jsref_some.asp
+
+        salMaior = dados.some(elemento =>(elemento.sexo == "M" && elemento.salario > 5000)) 
+        document.write(`<p>${salMaior}</p>`)
+
+        document.write(`<h3 style="color: blue;">Exercício 9</h3>`)
+
+        media = (tabela) => (tabela.reduce((acumulador, age) => acumulador + age.idade, 0) / tabela.length).toFixed(2)
+        document.write(`Media de idade ${media(dados)}`)
+
+
+        document.write(`<p style="font-weight: bold"> Trabalhadores acima da média de idade</p>`)
+        infoDados = () => {
+            dados.forEach((elemento, indice) => {
+                if (elemento.idade > 35) {
+                    document.write(`<p>${elemento.nome} ${elemento.idade} ${elemento.sexo} ${elemento.salario}</p>`)
+                }
+            })
+        }
+
+        infoDados(dados);
 
 
 
@@ -96,17 +144,23 @@
 
 
 
-       
 
 
 
 
-        /*
-                document.write(
-                    dados.filter(elemento => elemento.salario > 3000.00)
-        
-                );
-        */
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
