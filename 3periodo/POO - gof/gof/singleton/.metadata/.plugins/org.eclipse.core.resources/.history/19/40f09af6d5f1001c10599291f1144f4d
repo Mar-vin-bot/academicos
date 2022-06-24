@@ -1,0 +1,14 @@
+package oi;
+
+public class main {
+
+	public static void main(String[] args) {
+		
+		Tabuleiro  jogador1 = new Tabuleiro ("carlos", "Karol");
+		
+		
+		
+
+	}
+
+}

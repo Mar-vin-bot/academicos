@@ -1,0 +1,17 @@
+package oi;
+
+public class Configuracao {
+
+	private static Configuracao instancia;
+	
+	public static Configuracao getInstancia() {
+	if(instancia == null){
+	instancia = new Configuracao();
+    }
+	return instancia;
+	}
+	
+	private Configuracao() { 	
+    			
+	//lê as configurações
+	}

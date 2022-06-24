@@ -1,0 +1,21 @@
+package oi;
+
+public class Tabuleiro {
+	
+	static private Tabuleiro instancia;
+
+	public static Tabuleiro getInstancia() {
+		if(instancia == null)
+		instancia = new Tabuleiro();
+		return instancia;
+		}
+		// Construtor privado!
+		private Tabuleiro() { 					
+		//lê as configurações
+		}
+
+	
+	
+	
+
+}

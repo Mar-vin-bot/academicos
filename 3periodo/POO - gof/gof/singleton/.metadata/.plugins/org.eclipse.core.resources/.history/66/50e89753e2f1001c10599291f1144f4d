@@ -1,0 +1,23 @@
+package oi;
+
+public class main {
+
+	public static void main(String[] args) {
+		
+		Tabuleiro jogo = Tabuleiro.getInstancia();
+		
+		
+		Tabuleiro jogo1 = Tabuleiro.getInstancia();
+		Tabuleiro jogo2 = Tabuleiro.getInstancia();
+		Tabuleiro jogo3 = Tabuleiro.getInstancia();
+		
+		System.out.println(jogo);
+		System.out.println(jogo2);
+
+	}
+	
+
+	
+	
+	
+}

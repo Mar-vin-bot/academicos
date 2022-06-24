@@ -1,0 +1,8 @@
+package oi;
+
+public class Tabuleiro {
+	String namePlayer1, namePlayer2;
+
+	
+
+}

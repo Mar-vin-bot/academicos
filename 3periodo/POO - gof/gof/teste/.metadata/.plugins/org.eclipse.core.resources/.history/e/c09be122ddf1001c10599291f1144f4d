@@ -1,0 +1,23 @@
+package oi;
+
+public class main {
+
+	public static void main(String[] args) {
+		
+		 
+		Tabuleiro  jogo1 = new Tabuleiro ("Satoshi", "Elizabeth");
+		Tabuleiro  jogo2 = new Tabuleiro ("Zé Biden", "MBS");
+		Tabuleiro  jogo3 = new Tabuleiro ("Zelensky", "Putin");
+		
+		Configuracao configuracao = new Configuracao::getInstancia();
+		
+		
+		System.out.println(jogador1.getNamePlayer1());
+		System.out.println(jogador1.getNamePlayer2());
+		
+		System.out.println(jogador2.getNamePlayer1());
+		System.out.println(jogador2.getNamePlayer2());
+
+	}
+
+}

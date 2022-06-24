@@ -1,0 +1,15 @@
+package oi;
+
+public class main {
+
+	public static void main(String[] args) {
+		
+		Tabuleiro jogo = Tabuleiro.getInstancia();
+
+	}
+	
+
+	
+	
+	
+}

@@ -1,0 +1,22 @@
+package oi;
+
+public class Configuracao {
+
+	private static Configuracao instancia = new Configuracao();
+	
+	
+	public static Configuracao getInstancia() {
+	if(instancia == null)
+	instancia = new Configuracao();
+	return instancia;
+	}
+	// Construtor privado!
+	private Configuracao() { 					
+	//lê as configurações
+	}
+	// ...
+	
+	
+	
+	
+}

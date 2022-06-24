@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+/home/m12/Área de Trabalho/teste/.metadata/.plugins/org.eclipse.jdt.core
+1865797976.index
+646308851.index
+442201691.index
